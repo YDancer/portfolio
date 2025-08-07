@@ -21,6 +21,11 @@
     border-radius: 100%;
 }
 
+.right > a{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 p{
     max-width: 50%;
 }
