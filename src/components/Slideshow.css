@@ -1,3 +1,25 @@
-img{
+img{ /* Note change this when finished**/
     height: 100px;
+}
+
+.slideshowContainer{
+    display: flex;
+    align-items: center;
+}
+
+.slideshowContainer > button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slideshowImageContainer{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+.slideshowImageContainer > img{
+    height: 200px;
+    
 }
