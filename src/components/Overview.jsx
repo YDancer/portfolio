@@ -10,9 +10,6 @@ export default function Overview(){
         <section className="overviewContainer">
             <div className="left">
                 <h2>Overview</h2>
-                <h3>Keerat Singh</h3>
-            </div>
-            <div className="right">
                 <p>
                     Lorem ipsum dolor sit amet consectetur 
                     adipiscing elit quisque faucibus ex sapien 
@@ -24,6 +21,10 @@ export default function Overview(){
                     hendrerit semper vel class aptent taciti sociosqu ad 
                     litora torquent per conubia nostra inceptos 
                 </p>
+                
+            </div>
+            <div className="right">
+                <h3>Keerat Singh</h3>
                 <img src={sampleUser}></img>
                 <a href="?">LinkedIn</a>
             </div>
