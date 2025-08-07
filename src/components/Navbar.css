@@ -1,0 +1,31 @@
+.navbar{
+    border: 1px;
+    border-style: solid;
+    margin-bottom: 5px;
+}
+
+.navbarList{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-content: center;
+}
+
+.navbarList li > a{ /* I didn't know this was possible NEAT!*/
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbarList li:hover{
+    color: red;
+    background-color: red;
+    
+}
+
+.navbarList li > a:hover{ /* I didn't know this was possible NEAT!*/
+    color: black;
+    background-color: blue;
+}
