@@ -19,7 +19,28 @@ img{ /* Note change this when finished**/
     
 }
 
+.slideshowLeftImage{
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+.slideshowRightImage{
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
 .slideshowImageContainer > img{
     height: 200px;
-    
+}
+
+.slideshowLeftImage > img{
+    height: 200px;
+}
+
+.slideshowRightImage > img{
+    height: 200px;
 }
