@@ -19,11 +19,47 @@ img{ /* Note change this when finished**/
     
 }
 
+.slideshowImageContainer > img{
+    height: 200px;
+}
+
+.slideshowLeftArrow{
+    height: 50px;
+    width: 50px;
+    opacity: 0.9;
+}
+
+.slideshowLeftArrow:hover{
+    opacity: 0.7;
+}
+
+.slideshowLeftArrow:active{
+    opacity: 1;
+}
+
 .slideshowLeftImage{
     width: 100px;
     height: 200px;
     overflow: hidden;
     
+}
+
+.slideshowLeftImage > img{
+    height: 200px;
+}
+
+.slideshowRightArrow{
+    height: 50px;
+    width: 50px;
+    opacity: 0.9;
+}
+
+.slideshowRightArrow:hover{
+    opacity: 0.7;
+}
+
+.slideshowRightArrow:active{
+    opacity: 1;
 }
 
 .slideshowRightImage{
@@ -33,14 +69,7 @@ img{ /* Note change this when finished**/
     
 }
 
-.slideshowImageContainer > img{
-    height: 200px;
-}
-
-.slideshowLeftImage > img{
-    height: 200px;
-}
-
 .slideshowRightImage > img{
     height: 200px;
 }
+

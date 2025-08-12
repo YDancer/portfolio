@@ -1,8 +1,11 @@
 import sampleImage from "../assets/sampleImage.png"
+import leftArrow from "../assets/arrow1Left.svg"
+import rightArrow from "../assets/arrow1Right.svg"
 import "./Slideshow.css"
 import React from "react"
 
 // provide list of image elements for slideshow from upper component
+// ******IMPORTANT: ADD ALT TEXT TO IMAGES IN SLIDESHOW
 
 
 export default function Slideshow(props){
@@ -60,11 +63,11 @@ export default function Slideshow(props){
             <div className="slideshowLeftImage">
                 {images[leftImageIndex]}
             </div>
-            <button className="leftButton" onClick={leftImage}>Left</button>
+            <img className="slideshowLeftArrow" src={leftArrow} alt="Left Arrow" onClick={leftImage}></img>
             <div className="slideshowImageContainer">
                 {images[selectedImage]}
             </div>
-            <button className="rightButton" onClick={rightImage}>Right</button>
+            <img className="slideshowRightArrow" src={rightArrow} alt="Right Arrow" onClick={rightImage}></img>
             <div className="slideshowRightImage">
                 {images[rightImageIndex]}
             </div>
