@@ -7,16 +7,21 @@ import React from "react"
 // Project is the conglomerate of the image slideshow
 // Necessary sidebars and necessary text and headers
 export default function Project(){
+    // Image elements
     const imageList = import.meta.glob("../assets/testImages1/*", {eager:true, import:"default"}); 
     const imgs = Object.entries(imageList).map((i)=><img src={i[1]}></img>) // lowkey idk how this works
     // if it works it works
 
-    const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling overlay
-
+    // Image indexing
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [leftImageIndex, setLeftImageIndex] = React.useState(recomputeImage(false, 0));
     const [rightImageIndex, setRightImageIndex] = React.useState(recomputeImage(true, 0));
 
+    // overlay variables
+    const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling overlay
+
+
+    // slideshow functions/handlers
     function recomputeImage(goingRight, currentIndex){ // Selects the correct index for the image specified
         // Created so neighbouring images and current image can use the same function
         if (goingRight){ // if true advance the slide forward (to the right)
@@ -60,9 +65,13 @@ export default function Project(){
         })
     }
 
+    // overlay handlers
+    function overlayOn(){
+        setOverlayShown(()=>true)
+    }
 
-    function toggleOverlay(){
-        setOverlayShown((prev)=>!prev)
+    function overlayOff(){
+        setOverlayShown(()=>false)
     }
 
     return(
@@ -74,11 +83,20 @@ export default function Project(){
             leftHandler={leftImage}
             rightIndex={rightImageIndex}
             rightHandler={rightImage}
-            
-            ></Slideshow>
+            showOverlay = {overlayShown}
+            overlayHandler = {overlayOn}
+            />
 
-            {/**Will need to pass state from Slideshow between ImageModal */}
-            <ImageModal imageElements={imgs} appear={false}/>
+            {/**Overlay needs image elements (for a lower slideshow)
+             * current image indexing
+             * click handlers
+             */}
+            {overlayShown && 
+            <ImageModal imageElements={imgs} 
+            currentIndex={selectedImage} 
+            showOverlay={overlayShown}
+            overlayHandler={overlayOff}
+            />}
         </section>
     )
 }

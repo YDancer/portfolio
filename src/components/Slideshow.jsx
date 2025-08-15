@@ -21,7 +21,7 @@ export default function Slideshow(props){
                 {images[leftImageIndex]}
             </div>
             <img className="slideshowLeftArrow" src={leftArrow} alt="Left Arrow" onClick={props.leftHandler}></img>
-            <div className="slideshowImageContainer">
+            <div className="slideshowImageContainer" onClick={props.overlayHandler}>
                 {images[selectedImage]}
             </div>
             <img className="slideshowRightArrow" src={rightArrow} alt="Right Arrow" onClick={props.rightHandler}></img>
