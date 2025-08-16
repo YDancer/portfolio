@@ -1,0 +1,42 @@
+*{
+    color: #6D4932;
+}
+
+.projectContainer{
+    display: flex;
+    background-color: #EBDBC2;
+    justify-content: space-between;
+}
+
+.projectLeft{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.projectLeft > p{ /** Needs to be changed later from a different style sheet*/
+    max-width: 100%;
+}
+
+.projectCenter{
+    margin-left: 25px;
+}
+
+.projectCenter > p{
+    max-width: 100%;
+}
+
+.projectRight{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.projectRight > button{
+    background-color: #812B2B;
+    color: white;
+    margin: 25px 0px;
+}
