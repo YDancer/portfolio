@@ -96,6 +96,8 @@ export default function Project(){
             currentIndex={selectedImage} 
             showOverlay={overlayShown}
             overlayHandler={overlayOff}
+            rightHandler={rightImage}
+            leftHandler={leftImage}
             />}
         </section>
     )
