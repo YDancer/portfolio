@@ -2,8 +2,8 @@
     {
         "name" : "Sample Project 1",
         "imageDir" : "testImages1",
-        "imageTitles" : ["Cat heart", "Cat on chair", "Grey background"],
-        "imageDescs" : ["A picture of a cat sketch which contains a big heart", "A picture of a cat on a chair looking surprised a bit", "This image was a screenshot of something"],
+        "imageTitles" : ["Black cat", "Black cat staring", "Orange cat"],
+        "imageDescs" : ["A picture of a black cat with blue eyes and big ears", "A picture of a black cat with a big head staring", "A picture of a displeased orange cat"],
         "paragraphFile" : "sampleProject1.js",
         "links" : null
     }
