@@ -19,14 +19,13 @@ the placeholder text anyways. I think it'll be fine
 `;
 
 const name = "Sample Project 2";
-const imageDir = "testImages1";
 const imageTitles = ["Black cat alt", "Black cat staring alt", "Orange cat alt"];
 const imageDescs = ["A picture of a black cat with blue eyes and big ears", "A picture of a black cat with a big head staring", "A picture of a displeased orange cat"];
 const links = null;       
 
 const imageArray = [img1, img2, img3]
 
-export default {projObj, moreRole, name, imageDir, imageTitles, imageDescs, links, imageArray};
+export default {projObj, moreRole, name, imageTitles, imageDescs, links, imageArray};
 
 // Now create another js file that imports all files of this type
 // call it projImport.js or index.js or whatever, 
