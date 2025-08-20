@@ -111,8 +111,8 @@ export default function Project(props){
                                         //** Also add a way to distinguish which image you are on */
             showOverlay={overlayShown}
             overlayHandler={overlayOff}
-            rightHandler={rightImage}
-            leftHandler={leftImage}
+            recomputeImage={recomputeImage}
+            imageTitles={props.imageTitles}
             />}
         </section>
     )

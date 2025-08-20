@@ -47,13 +47,27 @@
     margin: 0;
 }
 
-.ImageModalOverlay > button{
+.ImageModalHeader > img{
     position: absolute;    
     float: right;
+    height: 50px;
+    width: 50px;
     left: 100%;
-    margin-left: -1.5rem;
+    margin-left: -50px;
+    margin-top: 0px;
+    opacity: 0.9;
 
 }
+
+.ImageModalHeader > img:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.ImageModalHeader > img:active{
+    opacity: 1;
+}
+
 
 .ImageModalFooter{
     display: flex;
@@ -67,4 +81,12 @@
 .ImageModalFooter > img{
     margin-right: 10px;
     height: 75px;
+}
+
+.overlaySlideshowSelected > img{
+    margin-right: 10px;
+    height: 73px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
 }
