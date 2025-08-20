@@ -8,12 +8,7 @@ import "./Project.css"
 // Necessary sidebars and necessary text and headers
 export default function Project(props){
     // Image elements
-
-
     const imgs = (props.imageArray.map((i)=><img src={i}></img>))
-   
-
-    
 
     // Image indexing
     const [selectedImage, setSelectedImage] = React.useState(0);
@@ -82,19 +77,18 @@ export default function Project(props){
             <div className="projectLeft">
                 <h2>Project Name</h2>
                 <Slideshow 
-            imageElements={imgs} 
-            currentIndex={selectedImage} 
-            leftIndex={leftImageIndex} 
-            leftHandler={leftImage}
-            rightIndex={rightImageIndex}
-            rightHandler={rightImage}
-            showOverlay = {overlayShown}
-            overlayHandler = {overlayOn}
-            />
-
-            {/**Overlay needs image elements (for a lower slideshow)
-             * current image indexing
-             * click handlers
+                    imageElements={imgs} 
+                    currentIndex={selectedImage} 
+                    leftIndex={leftImageIndex} 
+                    leftHandler={leftImage}
+                    rightIndex={rightImageIndex}
+                    rightHandler={rightImage}
+                    showOverlay = {overlayShown}
+                    overlayHandler = {overlayOn}
+                />
+            {/**
+             * Note the values need to populated with the respective data from files
+             * And they need to swap with respective variables
              */}
                 <h3>Image Name</h3>
                 <p>Image description goes here and tends to be a little longer</p>
@@ -113,7 +107,8 @@ export default function Project(props){
             </div>
             {overlayShown && 
             <ImageModal imageElements={imgs} 
-            currentIndex={selectedImage} 
+            currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
+                                        //** Also add a way to distinguish which image you are on */
             showOverlay={overlayShown}
             overlayHandler={overlayOff}
             rightHandler={rightImage}
