@@ -1,10 +1,10 @@
 
-Projects.json:
-    Projects json file assumes that the imageDir are in the src/assets/Projects folder
-    It also assumes that all files in the subfolder of ex: src/assets/Projects/proj1 are images
+projImport.js
+    This file imports all image and text data to go into project sections on portfolio
+    This is to help organize imports and ease addition of extra sections
+    
+    In order to add more, create a new js file in the projectText directory
+    Then add all the respective fields required (see an example project to see which ones, or the actual Body component)
+    Next make sure the images are imported
 
-    Furthermore, those images are assigned descriptions alphabetically
-    Ex: 1.png, a.jpg, 35.jpg should be ordered as follows: [1.png, 35.jpg, a.jpg]
-
-    Note that larger text sections (like objective, my role) will be stored in seperate js files, just for cleaner organization
-    Assuming that it is in the src/data/projectText folder
+    Now go to the projImport.js file, and add in the new file into the export array (assuming you import it too)

@@ -4,9 +4,12 @@ import "./Project.css"
 // Project is the conglomerate of the image slideshow
 // Necessary sidebars and necessary text and headers
 export default function Project(props){
-    const imageList = import.meta.glob("../assets/testImages1/*", {eager:true, import:"default"}); 
-    const imgs = Object.entries(imageList).map((i)=><img src={i[1]}></img>) // lowkey idk how this works
-    // if it works it works
+
+
+    const imgs = (props.imageArray.map((i)=><img src={i}></img>))
+   
+
+    
 
     return(
         <section className="projectContainer">
