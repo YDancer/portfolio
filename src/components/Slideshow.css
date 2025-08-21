@@ -1,3 +1,62 @@
-img{
+img{ /* Note change this when finished**/
     height: 100px;
 }
+
+.slideshowContainer{
+    display: flex;
+    align-items: center;
+}
+
+.slideshowContainer > button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slideshowImageContainer{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slideshowImageContainer > img{
+    height: 200px;
+}
+
+.slideshowImageContainer > img:hover{
+    cursor: pointer;
+}
+
+.slideshowLeftArrow{
+    height: 50px;
+    width: 50px;
+}
+
+.slideshowLeftImage{
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+.slideshowLeftImage > img{
+    height: 200px;
+}
+
+.slideshowRightArrow{
+    height: 50px;
+    width: 50px;
+}
+
+.slideshowRightImage{
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+.slideshowRightImage > img{
+    height: 200px;
+}
+

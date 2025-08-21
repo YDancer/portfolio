@@ -1,0 +1,71 @@
+*{
+    color: #1D0E58;
+}
+
+.projectContainer{
+    display: flex;
+    background-color: #EBDBC2;
+    justify-content: space-between;
+}
+
+.projectLeft{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.projectLeft > p{ /** Needs to be changed later from a different style sheet*/
+    max-width: 100%;
+    margin-top: 0;
+}
+
+.projectCenter{
+    margin-left: 25px;
+}
+
+.projectCenter > p{
+    max-width: 75%;
+    font-size: 1.1rem;
+}
+
+.projectRight{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.projectRight > button{
+    background-color: #812B2B;
+    color: white;
+    margin: 25px 0px;
+}
+
+.arrowButton{
+    opacity: 0.9;
+}
+
+.arrowButton:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.arrowButton:active{
+    opacity: 1;
+}
+
+.sidebarArrows{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.sidebarArrows > img{
+    height: 60px;
+    width: 60px;
+}
+
