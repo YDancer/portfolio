@@ -75,7 +75,7 @@ export default function Project(props){
     return(
         <section className="projectContainer">
             <div className="projectLeft">
-                <h2>Project Name</h2>
+                <h2>{props.name}</h2>
                 <Slideshow 
                     imageElements={imgs} 
                     currentIndex={selectedImage} 
@@ -90,16 +90,12 @@ export default function Project(props){
              * Note the values need to populated with the respective data from files
              * And they need to swap with respective variables
              */}
-                <h3>Image Name</h3>
-                <p>Image description goes here and tends to be a little longer</p>
+                <h3>{props.imageTitles[selectedImage]}</h3>
+                <p>{props.imageDesc[selectedImage]}</p>
             </div>
             <div className="projectCenter">
                 <h2>Objective</h2>
-                <p>Text for objective tends to be a whole paragraph of text. A lot longer then the description
-                    Text for objective tends to be a whole paragraph of text. A lot longer then the description
-                    Text for objective tends to be a whole paragraph of text. A lot longer then the description
-                    Text for objective tends to be a whole paragraph of text. A lot longer then the description
-                </p>
+                <p>{props.objective}</p>
             </div>
             <div className="projectRight">
                 <button>More on my role</button>
