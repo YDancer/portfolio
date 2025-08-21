@@ -46,12 +46,12 @@ export default function ImageModal(props){
     <>
         <div className="ImageModalOverlay">
             <div className="ImageModalHeader">
-                <img src={closeButton} alt="Close button" onClick={props.overlayHandler}></img>
+                <img src={closeButton} className="arrowButton" alt="Close button" onClick={props.overlayHandler}></img>
                 <h2>{props.imageTitles[currentIndex]}</h2>
             </div>
             {props.imageElements[currentIndex]}
             <div className="ImageModalFooter">
-                <img className="slideshowLeftArrow" src={leftArrow} alt="Left Arrow" onClick={leftImage}></img>
+                <img className="slideshowLeftArrow arrowButton" src={leftArrow} alt="Left Arrow" onClick={leftImage}></img>
                 {/**This is actually gonna be a lot more complicated
                  * So what the ideal method is, if the number of images exceeds the container size
                  * then the slideshow should be somehwat cyclic
@@ -62,7 +62,7 @@ export default function ImageModal(props){
                 {leftImageElements}
                 <span className="overlaySlideshowSelected">{props.imageElements[currentIndex]}</span>
                 {rightImageElements}
-                <img className="slideshowRightArrow" src={rightArrow} alt="Right Arrow" onClick={rightImage}></img>
+                <img className="slideshowRightArrow arrowButton" src={rightArrow} alt="Right Arrow" onClick={rightImage}></img>
                 
             </div>
         </div>

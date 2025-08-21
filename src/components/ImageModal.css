@@ -10,8 +10,6 @@
     cursor: pointer; /* Add a pointer on hover */
 }
 
-
-
 .ImageModalOverlay{
     position: fixed; 
     display: flex; 
@@ -28,20 +26,16 @@
 
 .ImageModalOverlay > img{
     height: 75%; /* Might have to change depending on image size*/
-    
-    
 }
 
 .ImageModalOverlay > img:hover{
     cursor: default;
-    
 }
 
 .ImageModalHeader{
     font-size: 1rem;
     margin-top: 5px;
 }
-
 
 .ImageModalHeader > h2{
     margin: 0;
@@ -55,19 +49,8 @@
     left: 100%;
     margin-left: -50px;
     margin-top: 0px;
-    opacity: 0.9;
 
 }
-
-.ImageModalHeader > img:hover{
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.ImageModalHeader > img:active{
-    opacity: 1;
-}
-
 
 .ImageModalFooter{
     display: flex;

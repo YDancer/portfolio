@@ -34,15 +34,6 @@ img{ /* Note change this when finished**/
     opacity: 0.9;
 }
 
-.slideshowLeftArrow:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.slideshowLeftArrow:active{
-    opacity: 1;
-}
-
 .slideshowLeftImage{
     width: 100px;
     height: 200px;
@@ -54,20 +45,9 @@ img{ /* Note change this when finished**/
     height: 200px;
 }
 
-
 .slideshowRightArrow{
     height: 50px;
     width: 50px;
-    opacity: 0.9;
-}
-
-.slideshowRightArrow:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.slideshowRightArrow:active{
-    opacity: 1;
 }
 
 .slideshowRightImage{

@@ -100,12 +100,12 @@ export default function Project(props){
                 <p>{props.objective}</p>
             </div>
             <div className="projectRight">
-                <div className="sidebarArrows">
-                    <img src={sidebarLeftArrow} alt="Expand the more on my role section "></img>
+                <div className="sidebarArrows arrowButton">
+                    <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
                     <span>My role</span>
                 </div>
-                <div className="sidebarArrows">
-                    <img src={sidebarLeftArrow}></img>
+                <div className="sidebarArrows arrowButton">
+                    <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
                     <span>External links</span>
                 </div>
             </div>
