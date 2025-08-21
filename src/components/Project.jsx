@@ -18,7 +18,9 @@ export default function Project(props){
     const [rightImageIndex, setRightImageIndex] = React.useState(recomputeImage(true, 0));
 
     // overlay variables
-    const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling overlay
+    const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling the big overlay
+
+    // sidebar variables
 
 
     // slideshow functions/handlers
@@ -73,6 +75,8 @@ export default function Project(props){
     function overlayOff(){
         setOverlayShown(()=>false)
     }
+
+    // sidebar handlers
 
     return(
         <section className="projectContainer">
