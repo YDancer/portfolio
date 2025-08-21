@@ -30,7 +30,7 @@
 
 .projectRight{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     margin-left: 25px;
 }
@@ -39,4 +39,17 @@
     background-color: #812B2B;
     color: white;
     margin: 25px 0px;
+}
+
+.sidebarArrows{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.sidebarArrows > img{
+    height: 60px;
+    width: 60px;
 }

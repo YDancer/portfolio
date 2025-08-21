@@ -3,6 +3,8 @@ import Sidebar from "./Sidebar";
 import ImageModal from "./ImageModal";
 import React from "react"
 import "./Project.css"
+import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
+
 
 // Project is the conglomerate of the image slideshow
 // Necessary sidebars and necessary text and headers
@@ -98,8 +100,14 @@ export default function Project(props){
                 <p>{props.objective}</p>
             </div>
             <div className="projectRight">
-                <button>More on my role</button>
-                <button>External Links</button>
+                <div className="sidebarArrows">
+                    <img src={sidebarLeftArrow} alt="Expand the more on my role section "></img>
+                    <span>My role</span>
+                </div>
+                <div className="sidebarArrows">
+                    <img src={sidebarLeftArrow}></img>
+                    <span>External links</span>
+                </div>
             </div>
             {overlayShown && 
             <ImageModal imageElements={imgs} 
