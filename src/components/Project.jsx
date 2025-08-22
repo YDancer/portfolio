@@ -21,7 +21,8 @@ export default function Project(props){
     const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling the big overlay
 
     // sidebar variables
-
+    const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
+    const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
 
     // slideshow functions/handlers
     function recomputeImage(goingRight, currentIndex){ // Selects the correct index for the image specified
@@ -77,6 +78,44 @@ export default function Project(props){
     }
 
     // sidebar handlers
+    function moreRoleToggle(){
+        setMoreRole((prev)=>(!prev));
+    }
+
+    function extLinkToggle(){
+        setExtLinks((prev)=>(!prev));
+    }
+
+    // used for replacing the right container in the project tab
+    function rightContainer(){
+        if (!moreRole && !extLinks){
+            return(
+                <div className="projectRight">
+                    <div className="sidebarArrows arrowButton" onClick={moreRoleToggle}>
+                        <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
+                        <span>My role</span>
+                    </div>
+                    <div className="sidebarArrows arrowButton" onClick={extLinkToggle}>
+                        <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
+                        <span>External links</span>
+                    </div>
+                </div>
+            )
+        } else if(moreRole){
+            return(
+                    <div className="projectRight">
+                        <Sidebar sidebarTitle="More about my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle}/>
+                    </div>
+            )
+
+        } else {
+            return(
+                <div className="projectRight">
+                    <Sidebar sidebarTitle="External links" sidebarContent={props.links} clickHandler={extLinkToggle}/>
+                </div>
+            )
+        }
+    }
 
     return(
         <section className="projectContainer">
@@ -103,16 +142,7 @@ export default function Project(props){
                 <h2>Objective</h2>
                 <p>{props.objective}</p>
             </div>
-            <div className="projectRight">
-                <div className="sidebarArrows arrowButton">
-                    <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
-                    <span>My role</span>
-                </div>
-                <div className="sidebarArrows arrowButton">
-                    <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
-                    <span>External links</span>
-                </div>
-            </div>
+            {rightContainer()}
             {overlayShown && 
             <ImageModal imageElements={imgs} 
             currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
