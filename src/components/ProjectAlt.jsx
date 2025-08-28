@@ -2,13 +2,13 @@ import Slideshow from "./Slideshow";
 import Sidebar from "./Sidebar";
 import ImageModal from "./ImageModal";
 import React from "react"
-import "./Project.css"
+import "./ProjectAlt.css"
 import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
 
 
-// Project is the conglomerate of the image slideshow
+// Alternate layout for the project tab
 // Necessary sidebars and necessary text and headers
-export default function Project(props){
+export default function ProjectAlt(props){
     // Image elements
     const imgs = (props.imageArray.map((i)=><img src={i}></img>))
 
@@ -20,9 +20,11 @@ export default function Project(props){
     // overlay variables
     const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling the big overlay
 
-    // sidebar variables
+    // info container variables
+    const [objExpand, setObjExpand] = React.useState(false); // Used for toggling objective container
     const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
     const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
+
 
     // NOTE:
     // consider moving these functions into seperate js files for more readability
@@ -84,49 +86,28 @@ export default function Project(props){
         setOverlayShown(()=>false)
     }
 
-    // sidebar handlers
+    // info container handlers
+    function objToggle(){
+        setObjExpand((prev)=>(!prev))
+        setMoreRole(()=>false);
+        setExtLinks(()=>false);
+    }
+
     function moreRoleToggle(){
+        setObjExpand(()=>false);
         setMoreRole((prev)=>(!prev));
+        setExtLinks(()=>false);
     }
 
     function extLinkToggle(){
+        setObjExpand(()=>false);
+        setMoreRole(()=>false);
         setExtLinks((prev)=>(!prev));
     }
 
-    // used for replacing the right container in the project tab
-    function rightContainer(){
-        if (!moreRole && !extLinks){
-            return(
-                <div className="projectRight">
-                    <div className="sidebarArrows arrowButton" onClick={moreRoleToggle}>
-                        <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
-                        <span>My role</span>
-                    </div>
-                    <div className="sidebarArrows arrowButton" onClick={extLinkToggle}>
-                        <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
-                        <span>External links</span>
-                    </div>
-                </div>
-            )
-        } else if(moreRole){
-            return(
-                    <div className="projectRight">
-                        <Sidebar sidebarTitle="More about my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle}/>
-                    </div>
-            )
-
-        } else {
-            return(
-                <div className="projectRight">
-                    <Sidebar sidebarTitle="External links" sidebarContent={props.links} clickHandler={extLinkToggle}/>
-                </div>
-            )
-        }
-    }
-
     return(
-        <section className="projectContainer">
-            <div className="projectLeft">
+        <section className="projectAltContainer">
+            <div className="projectAltLeft">
                 <h2>{props.name}</h2>
                 <Slideshow 
                     imageElements={imgs} 
@@ -145,11 +126,15 @@ export default function Project(props){
                 <h3>{props.imageTitles[selectedImage]}</h3>
                 <p>{props.imageDesc[selectedImage]}</p>
             </div>
-            <div className="projectCenter">
+            <div className="projectAltCenter"> 
+                {/** What you want is the slideshow to be bigger when no item is selected
+             * in order to do this you can do inline styling, and select which 
+             * class name when the other box is toggled, this requires some thinking though
+             * you could probably do <Slideshow className="bigImage"> and .bigImage img {size change}
+             */}
                 <h2>Objective</h2>
                 <p>{props.objective}</p>
             </div>
-            {rightContainer()}
             {overlayShown && 
             <ImageModal imageElements={imgs} 
             currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
