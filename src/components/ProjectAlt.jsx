@@ -11,7 +11,7 @@ import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
 export default function ProjectAlt(props){
     // Image elements
     const imgs = (props.imageArray.map((i)=><img src={i}></img>))
-
+    
     // Image indexing
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [leftImageIndex, setLeftImageIndex] = React.useState(recomputeImage(false, 0));
@@ -105,10 +105,24 @@ export default function ProjectAlt(props){
         setExtLinks((prev)=>(!prev));
     }
 
+    // As of right now, i'm not sure how to get dimension of a component
+    // As a compromise the following variable using manual calculations
+
+    const containerHeight = ""
+    // height of the following needs to be calculated
+    /**
+     * h2 ()
+     * h3
+     * Slideshow (400px)
+     * p
+     * <bottomContainer>
+     */
+
     return(
         <section className="projectAltContainer">
             <div className="projectAltLeft">
                 <h2>{props.name}</h2>
+                <h3>{props.imageTitles[selectedImage]}</h3>
                 <Slideshow 
                     imageElements={imgs} 
                     currentIndex={selectedImage} 
@@ -118,22 +132,14 @@ export default function ProjectAlt(props){
                     rightHandler={rightImage}
                     showOverlay = {overlayShown}
                     overlayHandler = {overlayOn}
+                    isAlt = {true}
+                    imgArray = {props.imageArray} 
                 />
             {/**
              * Note the values need to populated with the respective data from files
              * And they need to swap with respective variables
              */}
-                <h3>{props.imageTitles[selectedImage]}</h3>
                 <p>{props.imageDesc[selectedImage]}</p>
-            </div>
-            <div className="projectAltCenter"> 
-                {/** What you want is the slideshow to be bigger when no item is selected
-             * in order to do this you can do inline styling, and select which 
-             * class name when the other box is toggled, this requires some thinking though
-             * you could probably do <Slideshow className="bigImage"> and .bigImage img {size change}
-             */}
-                <h2>Objective</h2>
-                <p>{props.objective}</p>
             </div>
             {overlayShown && 
             <ImageModal imageElements={imgs} 

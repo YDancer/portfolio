@@ -137,6 +137,7 @@ export default function Project(props){
                     rightHandler={rightImage}
                     showOverlay = {overlayShown}
                     overlayHandler = {overlayOn}
+                    isAlt = {false}
                 />
             {/**
              * Note the values need to populated with the respective data from files

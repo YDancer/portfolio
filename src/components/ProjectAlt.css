@@ -5,7 +5,8 @@
 .projectAltContainer{
     display: flex;
     background-color: #D2F1E4;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
 .projectAltLeft{
@@ -18,7 +19,12 @@
 
 .projectAltLeft > p{ /** Needs to be changed later from a different style sheet*/
     max-width: 100%;
+    margin-top: 10px;
+}
+
+.projectAltLeft > h3{
     margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .projectAltCenter{
