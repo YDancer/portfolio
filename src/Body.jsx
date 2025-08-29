@@ -1,4 +1,5 @@
 import Project from "./components/Project"
+import Overview from "./components/Overview"
 //import {default as projectList} from "./data/projects.json"
 import ProjectAlt from "./components/ProjectAlt"
 
@@ -39,9 +40,10 @@ export default function Body(){
     })
     
     return(
-        <>
+        <main>
+            <Overview/>
             {projElements}
             {altProjElements}
-        </>
+        </main>
     )
 }

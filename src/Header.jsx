@@ -1,4 +1,3 @@
-import Overview from "./components/Overview"
 import Navbar from "./components/Navbar"
 
 // Combines the header elements
@@ -8,7 +7,6 @@ export default function Header(){
     return(
         <header>
             <Navbar/>
-            <Overview/>
         </header>
     )
 }

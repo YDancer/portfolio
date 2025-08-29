@@ -1,7 +1,3 @@
-img{ /* Note change this when finished**/
-    height: 100px;
-}
-
 .slideshowContainer{
     display: flex;
     align-items: center;
