@@ -30,6 +30,12 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
+    min-width: 150px;
+}
+
+.navbarContainer a > img{
+    height: 50px;
+    width: 50px;
 }
 
 .navbarContainer > a:hover{
