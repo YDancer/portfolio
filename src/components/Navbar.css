@@ -1,31 +1,48 @@
 .navbar{
-    border: 1px;
-    border-style: solid;
-    margin-bottom: 5px;
-}
-
-.navbarList{
     display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #812B2B;
+    height: 75px;
+    margin: 0;
 }
 
-.navbarList li > a{ /* I didn't know this was possible NEAT!*/
-    color: white;
-    background-color: blue;
-    padding: 10px;
+.navbarLeftContainer{
+    width: 50%;
+}
+
+.navbarRightContainer{
+    margin-right: 10px;
+}
+
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 90%;
+}
+
+.navbarContainer > a{ 
+    color: #D2F1E4;
     text-decoration: none;
     text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.navbarList li:hover{
-    color: red;
-    background-color: red;
-    
+.navbarContainer > a:hover{
+    background-color: #C75757;
 }
 
-.navbarList li > a:hover{ /* I didn't know this was possible NEAT!*/
-    color: black;
-    background-color: blue;
+.navbarImg{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbarImg > img{
+    width: 75px;
+    height: 75px;
 }
