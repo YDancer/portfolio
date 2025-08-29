@@ -4,8 +4,9 @@
 
 .projectContainer{
     display: flex;
-    background-color: #EBDBC2;
+    background-color: #E8E5F0;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .projectLeft{
