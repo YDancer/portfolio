@@ -16,16 +16,16 @@ export default function Navbar(){
 
     return(
         <nav className="navbar">
-            
+            <div className="navbarLeftContainer">
             <a href="" className="navbarImg">
                 <img src={logo1}></img>
             </a>
             
-            <div className="navbarLeftContainer navbarContainer">
+            <div className="navbarContainer leftContainerLinks">
                 <a href=""><img src={homeIcon}></img>Home</a>
                 <a href="Projects"><img src={projectIcon}></img>Projects</a>
                 <a href="External Media"><img src={projectIcon2}></img>External Media</a>
-                
+            </div>
             </div>
             <div className="navbarRightContainer navbarContainer">
                 <a href="Contact Me"><img src={contactIcon}></img>Contact Me</a>
