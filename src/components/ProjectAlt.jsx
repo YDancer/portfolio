@@ -1,9 +1,8 @@
 import Slideshow from "./Slideshow";
-import Sidebar from "./Sidebar";
+import BottomBar from "./BottomBar";
 import ImageModal from "./ImageModal";
 import React from "react"
 import "./ProjectAlt.css"
-import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
 
 
 // Alternate layout for the project tab
@@ -140,7 +139,9 @@ export default function ProjectAlt(props){
              * And they need to swap with respective variables
              */}
                 <p>{props.imageDesc[selectedImage]}</p>
+                <BottomBar/>
             </div>
+            
             {overlayShown && 
             <ImageModal imageElements={imgs} 
             currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
