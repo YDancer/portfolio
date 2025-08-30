@@ -3,6 +3,7 @@ import BottomBar from "./BottomBar";
 import ImageModal from "./ImageModal";
 import React from "react"
 import "./ProjectAlt.css"
+import Sidebar from "./Sidebar";
 
 
 // Alternate layout for the project tab
@@ -23,7 +24,6 @@ export default function ProjectAlt(props){
     const [objExpand, setObjExpand] = React.useState(false); // Used for toggling objective container
     const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
     const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
-
 
     // NOTE:
     // consider moving these functions into seperate js files for more readability
@@ -104,6 +104,18 @@ export default function ProjectAlt(props){
         setExtLinks((prev)=>(!prev));
     }
 
+    function recomputeSidebar(){
+        if (objExpand){
+            return(<Sidebar sidebarTitle="Objective" sidebarContent={props.objective} clickHandler={objToggle}/>)
+        } else if (moreRole){
+            return(<Sidebar sidebarTitle="More on my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle}/>)
+        } else if (extLinks){
+            return(<Sidebar sidebarTitle="External Links" sidebarContent={props.links} clickHandler={extLinkToggle}/>)
+        } else {
+            return (<></>)
+        }
+    }
+
     // As of right now, i'm not sure how to get dimension of a component
     // As a compromise the following variable using manual calculations
 
@@ -119,6 +131,7 @@ export default function ProjectAlt(props){
 
     return(
         <section className="projectAltContainer">
+            {recomputeSidebar()}
             <div className="projectAltLeft">
                 <h2>{props.name}</h2>
                 <h3>{props.imageTitles[selectedImage]}</h3>
@@ -139,7 +152,14 @@ export default function ProjectAlt(props){
              * And they need to swap with respective variables
              */}
                 <p>{props.imageDesc[selectedImage]}</p>
-                <BottomBar/>
+                <BottomBar 
+                objHandler={objToggle} 
+                roleHandler={moreRoleToggle} 
+                linkHandler={extLinkToggle} 
+                objExpand = {objExpand}
+                moreRole = {moreRole}
+                extLinks = {extLinks}
+                />
             </div>
             
             {overlayShown && 

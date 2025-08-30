@@ -5,6 +5,13 @@
 .projectAltContainer{
     background-color: #D2F1E4;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.projectAltContainer > aside {
+    margin-right: 0;
+    margin-left: 10px;
 }
 
 .projectAltLeft{
