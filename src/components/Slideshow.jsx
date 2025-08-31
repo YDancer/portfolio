@@ -15,7 +15,7 @@ export default function Slideshow(props){
     const rightImageIndex = props.rightIndex
     const selectedImage = props.currentIndex
     
-    const imageHeight = props.isAlt ? 400 : 200
+    const imageHeight = props.isAlt ? 200*props.scaleFactor : 200
     // Will be used in the following classes: Also assuming these are all px measurements
     /**
      * slideshowImageContainer
@@ -27,13 +27,13 @@ export default function Slideshow(props){
      * 
      * This is done in order to have a "dynamic" sizing
      */
-    const imageWidth = props.isAlt ? 400 : 200 
+    const imageWidth = props.isAlt ? 200*props.scaleFactor : 200 
     // Used in slideshowImageContainer
 
-    const containerWidth = props.isAlt ? 200 : 100
+    const containerWidth = props.isAlt ? 100*props.scaleFactor : 100
     // Used in leftImage and rightImage    
 
-    const arrowWidthHeight = props.isAlt ? 100 : 50
+    const arrowWidthHeight = props.isAlt ? 50*props.scaleFactor : 50
 
 
     // Inline styles for the dimension

@@ -138,6 +138,7 @@ export default function Project(props){
                     showOverlay = {overlayShown}
                     overlayHandler = {overlayOn}
                     isAlt = {false}
+                    scaleFactor = {1}
                 />
             {/**
              * Note the values need to populated with the respective data from files

@@ -25,6 +25,8 @@ export default function ProjectAlt(props){
     const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
     const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
 
+    const [scaleFactor, setScaleFactor] = React.useState(2)
+
     // NOTE:
     // consider moving these functions into seperate js files for more readability
 
@@ -87,22 +89,41 @@ export default function ProjectAlt(props){
 
     // info container handlers
     function objToggle(){
-        setObjExpand((prev)=>(!prev))
+        setObjExpand((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.5)
+            }
+            return(!prev)})
         setMoreRole(()=>false);
         setExtLinks(()=>false);
     }
 
     function moreRoleToggle(){
         setObjExpand(()=>false);
-        setMoreRole((prev)=>(!prev));
+        setMoreRole((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.5)
+            }
+            return(!prev)});
         setExtLinks(()=>false);
     }
 
     function extLinkToggle(){
         setObjExpand(()=>false);
         setMoreRole(()=>false);
-        setExtLinks((prev)=>(!prev));
+        setExtLinks((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.5)
+            }
+            return(!prev)});
     }
+
 
     function recomputeSidebar(){
         if (objExpand){
@@ -114,6 +135,7 @@ export default function ProjectAlt(props){
         } else {
             return (<></>)
         }
+        
     }
 
     // As of right now, i'm not sure how to get dimension of a component
@@ -128,6 +150,11 @@ export default function ProjectAlt(props){
      * p
      * <bottomContainer>
      */
+
+    // Potential solution for changing size of slideshow
+    // Create a scaleFactor variable
+    // Alt project changes when one of the toggles are clicked
+    // Pass this variable to slideshow and rerender
 
     return(
         <section className="projectAltContainer">
@@ -146,6 +173,7 @@ export default function ProjectAlt(props){
                     overlayHandler = {overlayOn}
                     isAlt = {true}
                     imgArray = {props.imageArray} 
+                    scaleFactor={scaleFactor}
                 />
             {/**
              * Note the values need to populated with the respective data from files
