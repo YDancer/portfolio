@@ -5,16 +5,27 @@
 .projectAltContainer{
     background-color: #D2F1E4;
     margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
 }
 
-.projectAltContainer > aside {
+.projectAltContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projectAltContent > aside {
     margin-right: 0;
     margin-left: 10px;
+    max-width: 30%;
+    background-color: #D2F1E4;
 }
 
-.projectAltLeft{
+.projectAltContent > aside > p{
+    max-width: 95%;
+    font-size: 1.4em;
+}
+
+.projectAltImage{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,23 +34,14 @@
     margin-right: 25px;
 }
 
-.projectAltLeft > p{ /** Needs to be changed later from a different style sheet*/
+.projectAltImage > p{ /** Needs to be changed later from a different style sheet*/
     max-width: 100%;
     margin-top: 10px;
 }
 
-.projectAltLeft > h3{
+.projectAltImage > h3{
     margin-top: 0;
     margin-bottom: 5px;
-}
-
-.projectAltCenter{
-    margin-left: 25px;
-}
-
-.projectAltCenter > p{
-    max-width: 95%;
-    font-size: 1.1rem;
 }
 
 .sidebarArrows{

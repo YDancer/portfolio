@@ -10,7 +10,9 @@ import Sidebar from "./Sidebar";
 // Necessary sidebars and necessary text and headers
 export default function ProjectAlt(props){
     // Image elements
-    const imgs = (props.imageArray.map((i)=><img src={i}></img>))
+    let x = 0
+    const imgs = (props.imageArray.map((i)=>{
+        return(<img src={i} key={x++}></img>)}))
     
     // Image indexing
     const [selectedImage, setSelectedImage] = React.useState(0);
@@ -93,7 +95,7 @@ export default function ProjectAlt(props){
             if (prev){
                 setScaleFactor(()=>2)
             } else {
-                setScaleFactor(()=>1.5)
+                setScaleFactor(()=>1.75)
             }
             return(!prev)})
         setMoreRole(()=>false);
@@ -106,7 +108,7 @@ export default function ProjectAlt(props){
             if (prev){
                 setScaleFactor(()=>2)
             } else {
-                setScaleFactor(()=>1.5)
+                setScaleFactor(()=>1.75)
             }
             return(!prev)});
         setExtLinks(()=>false);
@@ -119,7 +121,7 @@ export default function ProjectAlt(props){
             if (prev){
                 setScaleFactor(()=>2)
             } else {
-                setScaleFactor(()=>1.5)
+                setScaleFactor(()=>1.75)
             }
             return(!prev)});
     }
@@ -127,69 +129,51 @@ export default function ProjectAlt(props){
 
     function recomputeSidebar(){
         if (objExpand){
-            return(<Sidebar sidebarTitle="Objective" sidebarContent={props.objective} clickHandler={objToggle}/>)
+            return(<Sidebar sidebarTitle="Objective" sidebarContent={props.objective} clickHandler={objToggle} isAlt={true}/>)
         } else if (moreRole){
-            return(<Sidebar sidebarTitle="More on my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle}/>)
+            return(<Sidebar sidebarTitle="More on my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle} isAlt={true}/>)
         } else if (extLinks){
-            return(<Sidebar sidebarTitle="External Links" sidebarContent={props.links} clickHandler={extLinkToggle}/>)
+            return(<Sidebar sidebarTitle="External Links" sidebarContent={props.links} clickHandler={extLinkToggle} isAlt={true}/>)
         } else {
             return (<></>)
         }
         
     }
 
-    // As of right now, i'm not sure how to get dimension of a component
-    // As a compromise the following variable using manual calculations
-
-    const containerHeight = ""
-    // height of the following needs to be calculated
-    /**
-     * h2 ()
-     * h3
-     * Slideshow (400px)
-     * p
-     * <bottomContainer>
-     */
-
-    // Potential solution for changing size of slideshow
-    // Create a scaleFactor variable
-    // Alt project changes when one of the toggles are clicked
-    // Pass this variable to slideshow and rerender
 
     return(
         <section className="projectAltContainer">
-            {recomputeSidebar()}
-            <div className="projectAltLeft">
-                <h2>{props.name}</h2>
-                <h3>{props.imageTitles[selectedImage]}</h3>
-                <Slideshow 
-                    imageElements={imgs} 
-                    currentIndex={selectedImage} 
-                    leftIndex={leftImageIndex} 
-                    leftHandler={leftImage}
-                    rightIndex={rightImageIndex}
-                    rightHandler={rightImage}
-                    showOverlay = {overlayShown}
-                    overlayHandler = {overlayOn}
-                    isAlt = {true}
-                    imgArray = {props.imageArray} 
-                    scaleFactor={scaleFactor}
-                />
-            {/**
-             * Note the values need to populated with the respective data from files
-             * And they need to swap with respective variables
-             */}
-                <p>{props.imageDesc[selectedImage]}</p>
-                <BottomBar 
+            <div className="projectAltContent">
+                 {recomputeSidebar()}
+                <div className="projectAltImage">
+                    <h2>{props.name}</h2>
+                    <h3>{props.imageTitles[selectedImage]}</h3>
+                    <Slideshow 
+                        imageElements={imgs} 
+                        currentIndex={selectedImage} 
+                        leftIndex={leftImageIndex} 
+                        leftHandler={leftImage}
+                        rightIndex={rightImageIndex}
+                        rightHandler={rightImage}
+                        showOverlay = {overlayShown}
+                        overlayHandler = {overlayOn}
+                        isAlt = {true}
+                        imgArray = {props.imageArray} 
+                        scaleFactor={scaleFactor}
+                    />
+                    <p>{props.imageDesc[selectedImage]}</p>
+                </div>
+            </div>
+            
+            <BottomBar 
                 objHandler={objToggle} 
                 roleHandler={moreRoleToggle} 
                 linkHandler={extLinkToggle} 
                 objExpand = {objExpand}
                 moreRole = {moreRole}
                 extLinks = {extLinks}
-                />
-            </div>
-            
+            />
+
             {overlayShown && 
             <ImageModal imageElements={imgs} 
             currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/

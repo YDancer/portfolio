@@ -74,7 +74,7 @@ export default function Slideshow(props){
     const images = setupImages()
 
     return(
-        <div className="slideshowContainer">
+        <div className="slideshowContainer" style={props.isAlt ? {minHeight:"400px"}: {minHeight: "none"}}>
             <div className="slideshowLeftImage" style={adjacentContainerStyles}>
                 {images[leftImageIndex]}
             </div>

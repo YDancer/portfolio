@@ -6,3 +6,7 @@ body{
 main{
     margin: 25px 50px;
 }
+
+section{
+    border-radius: 10px;
+}
