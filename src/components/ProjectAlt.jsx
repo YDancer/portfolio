@@ -1,17 +1,19 @@
 import Slideshow from "./Slideshow";
-import Sidebar from "./Sidebar";
+import BottomBar from "./BottomBar";
 import ImageModal from "./ImageModal";
 import React from "react"
-import "./Project.css"
-import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
+import "./ProjectAlt.css"
+import Sidebar from "./Sidebar";
 
 
-// Project is the conglomerate of the image slideshow
+// Alternate layout for the project tab
 // Necessary sidebars and necessary text and headers
-export default function Project(props){
+export default function ProjectAlt(props){
     // Image elements
-    const imgs = (props.imageArray.map((i)=><img src={i}></img>))
-
+    let x = 0
+    const imgs = (props.imageArray.map((i)=>{
+        return(<img src={i} key={x++}></img>)}))
+    
     // Image indexing
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [leftImageIndex, setLeftImageIndex] = React.useState(recomputeImage(false, 0));
@@ -20,9 +22,12 @@ export default function Project(props){
     // overlay variables
     const [overlayShown, setOverlayShown] = React.useState(false); // used for toggling the big overlay
 
-    // sidebar variables
+    // info container variables
+    const [objExpand, setObjExpand] = React.useState(false); // Used for toggling objective container
     const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
     const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
+
+    const [scaleFactor, setScaleFactor] = React.useState(2)
 
     // NOTE:
     // consider moving these functions into seperate js files for more readability
@@ -84,74 +89,91 @@ export default function Project(props){
         setOverlayShown(()=>false)
     }
 
-    // sidebar handlers
+    // info container handlers
+    function objToggle(){
+        setObjExpand((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.75)
+            }
+            return(!prev)})
+        setMoreRole(()=>false);
+        setExtLinks(()=>false);
+    }
+
     function moreRoleToggle(){
-        setMoreRole((prev)=>(!prev));
+        setObjExpand(()=>false);
+        setMoreRole((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.75)
+            }
+            return(!prev)});
+        setExtLinks(()=>false);
     }
 
     function extLinkToggle(){
-        setExtLinks((prev)=>(!prev));
+        setObjExpand(()=>false);
+        setMoreRole(()=>false);
+        setExtLinks((prev)=>{
+            if (prev){
+                setScaleFactor(()=>2)
+            } else {
+                setScaleFactor(()=>1.75)
+            }
+            return(!prev)});
     }
 
-    // used for replacing the right container in the project tab
-    function rightContainer(){
-        if (!moreRole && !extLinks){
-            return(
-                <div className="projectRight">
-                    <div className="sidebarArrows arrowButton" onClick={moreRoleToggle}>
-                        <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
-                        <span>My role</span>
-                    </div>
-                    <div className="sidebarArrows arrowButton" onClick={extLinkToggle}>
-                        <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
-                        <span>External links</span>
-                    </div>
-                </div>
-            )
-        } else if(moreRole){
-            return(
-                    <div className="projectRight">
-                        <Sidebar sidebarTitle="More about my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle} isAlt={false}/>
-                    </div>
-            )
 
+    function recomputeSidebar(){
+        if (objExpand){
+            return(<Sidebar sidebarTitle="Objective" sidebarContent={props.objective} clickHandler={objToggle} isAlt={true}/>)
+        } else if (moreRole){
+            return(<Sidebar sidebarTitle="More on my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle} isAlt={true}/>)
+        } else if (extLinks){
+            return(<Sidebar sidebarTitle="External Links" sidebarContent={props.links} clickHandler={extLinkToggle} isAlt={true}/>)
         } else {
-            return(
-                <div className="projectRight">
-                    <Sidebar sidebarTitle="External links" sidebarContent={props.links} clickHandler={extLinkToggle} isAlt={false}/>
-                </div>
-            )
+            return (<></>)
         }
+        
     }
+
 
     return(
-        <section className="projectContainer">
-            <div className="projectLeft">
-                <h2>{props.name}</h2>
-                <Slideshow 
-                    imageElements={imgs} 
-                    currentIndex={selectedImage} 
-                    leftIndex={leftImageIndex} 
-                    leftHandler={leftImage}
-                    rightIndex={rightImageIndex}
-                    rightHandler={rightImage}
-                    showOverlay = {overlayShown}
-                    overlayHandler = {overlayOn}
-                    isAlt = {false}
-                    scaleFactor = {1}
-                />
-            {/**
-             * Note the values need to populated with the respective data from files
-             * And they need to swap with respective variables
-             */}
-                <h3>{props.imageTitles[selectedImage]}</h3>
-                <p>{props.imageDesc[selectedImage]}</p>
+        <section className="projectAltContainer">
+            <div className="projectAltContent">
+                 {recomputeSidebar()}
+                <div className="projectAltImage">
+                    <h2>{props.name}</h2>
+                    <h3>{props.imageTitles[selectedImage]}</h3>
+                    <Slideshow 
+                        imageElements={imgs} 
+                        currentIndex={selectedImage} 
+                        leftIndex={leftImageIndex} 
+                        leftHandler={leftImage}
+                        rightIndex={rightImageIndex}
+                        rightHandler={rightImage}
+                        showOverlay = {overlayShown}
+                        overlayHandler = {overlayOn}
+                        isAlt = {true}
+                        imgArray = {props.imageArray} 
+                        scaleFactor={scaleFactor}
+                    />
+                    <p>{props.imageDesc[selectedImage]}</p>
+                </div>
             </div>
-            <div className="projectCenter">
-                <h2>Objective</h2>
-                <p>{props.objective}</p>
-            </div>
-            {rightContainer()}
+            
+            <BottomBar 
+                objHandler={objToggle} 
+                roleHandler={moreRoleToggle} 
+                linkHandler={extLinkToggle} 
+                objExpand = {objExpand}
+                moreRole = {moreRole}
+                extLinks = {extLinks}
+            />
+
             {overlayShown && 
             <ImageModal imageElements={imgs} 
             currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/

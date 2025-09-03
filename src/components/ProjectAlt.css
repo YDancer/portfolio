@@ -1,0 +1,59 @@
+*{
+    color: #1D0E58;
+}
+
+.projectAltContainer{
+    background-color: #D2F1E4;
+    margin-bottom: 25px;
+}
+
+.projectAltContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projectAltContent > aside {
+    margin-right: 0;
+    margin-left: 10px;
+    max-width: 30%;
+    background-color: #D2F1E4;
+}
+
+.projectAltContent > aside > p{
+    max-width: 95%;
+    font-size: 1.4em;
+}
+
+.projectAltImage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.projectAltImage > p{ /** Needs to be changed later from a different style sheet*/
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.projectAltImage > h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.sidebarArrows{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.sidebarArrows > img{
+    height: 60px;
+    width: 60px;
+}
+

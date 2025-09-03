@@ -1,6 +1,7 @@
 import Project from "./components/Project"
 import Overview from "./components/Overview"
 //import {default as projectList} from "./data/projects.json"
+import ProjectAlt from "./components/ProjectAlt"
 
 import {default as projectList} from "./data/projImport";
 
@@ -22,11 +23,27 @@ export default function Body(){
     key = {proj.name}
     />
     )});
+
+    const altProjElements = projectList.map((proj)=>{
+        return(
+            <ProjectAlt 
+            name={proj.name} 
+            imageDesc={proj.imageDescs}
+            imageTitles={proj.imageTitles}
+            objective={proj.projObj}
+            moreRole={proj.moreRole}
+            links={proj.links}
+            imageArray={proj.imageArray}
+            key = {proj.name}
+            />
+        )
+    })
     
     return(
         <main>
             <Overview/>
             {projElements}
+            {altProjElements}
         </main>
     )
 }
