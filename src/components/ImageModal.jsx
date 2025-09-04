@@ -44,7 +44,7 @@ export default function ImageModal(props){
 
     return(
     <>
-        <div className="ImageModalOverlay">
+        <div className="ImageModalOverlay" style={{backgroundColor: props.isAlt ? "#D2F1E4" : "#E8E5F0"}}>
             <div className="ImageModalHeader">
                 <img src={closeButton} className="arrowButton" alt="Close button" onClick={props.overlayHandler}></img>
                 <h2>{props.imageTitles[currentIndex]}</h2>

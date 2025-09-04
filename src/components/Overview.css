@@ -17,6 +17,7 @@
     flex-direction: column;
     padding-right: 10px;
     text-align: center;
+    margin-top: 1.5em;
 }
 
 .right > img{
@@ -36,4 +37,5 @@
 
 .right > h3 {
     font-size: 2rem;
+    margin-top: 0.83em;
 }

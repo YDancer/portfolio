@@ -10,7 +10,7 @@ export default function Overview(){
     return(
         <section className="overviewContainer">
             <div className="left">
-                <h2>Overview</h2>
+                <h2 style={{fontSize: "3rem", marginBottom: "0"}} id="overview">Overview</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur 
                     adipiscing elit quisque faucibus ex sapien 

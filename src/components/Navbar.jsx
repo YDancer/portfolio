@@ -20,13 +20,13 @@ export default function Navbar(){
             </a>
             
             <div className="navbarContainer leftContainerLinks">
-                <a href=""><img src={homeIcon}></img>Home</a>
-                <a href="Projects"><img src={projectIcon}></img>Projects</a>
-                <a href="External Media"><img src={projectIcon2}></img>External Media</a>
+                <a href="#overview"><img src={homeIcon}></img>Home</a>
+                <a href="#projects"><img src={projectIcon}></img>Projects</a>
+                <a href="#extmedia"><img src={projectIcon2}></img>External Media</a>
             </div>
             </div>
             <div className="navbarRightContainer navbarContainer">
-                <a href="Contact Me"><img src={contactIcon}></img>Contact Me</a>
+                <a href="#contact"><img src={contactIcon}></img>Contact Me</a>
             </div>
         </nav>
     )

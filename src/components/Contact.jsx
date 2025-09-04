@@ -5,7 +5,7 @@ import emailIcon from "../assets/email.svg"
 export default function Contact(){
     return(
         <section className="contactContainer">
-            <h2>Contact Me</h2>
+            <h2 id="contact">Contact Me</h2>
             <h3>Feel free to contact me via email or send me a message on LinkedIn:</h3>
             <div className="contactLinks">
                 <div className="linkContainer">

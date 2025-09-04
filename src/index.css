@@ -25,8 +25,13 @@ body{
     background-color: #F7F9F9;
 }
 
+
 main{
     margin: 25px 50px;
+}
+
+main > hr{
+    color:#1D0E58;
 }
 
 section{

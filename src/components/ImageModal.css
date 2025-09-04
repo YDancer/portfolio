@@ -21,7 +21,6 @@
     width: 90%;
     /* Black background with opacity */
     z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-    background-color: #EBDBC2;
 }
 
 .ImageModalOverlay > img{
