@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    min-width: 150px;
+    min-width: 175px;
 }
 
 .navbarContainer a > img{
@@ -56,4 +56,9 @@
 .navbarImg > img{
     width: 75px;
     height: 75px;
+}
+
+.navbar a{
+   font-family: SquareAntiqua;
+   font-size: 1rem;
 }

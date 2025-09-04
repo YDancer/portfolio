@@ -4,7 +4,22 @@
     color: #1D0E58;
 }
 
+.contactContainer > h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contactContainer > h3{
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
 .contactLinks{
     display: flex;
     justify-content: space-around;
+}
+
+.contactLinks > span {
+    font-size: 1.4rem;
 }

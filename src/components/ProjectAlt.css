@@ -20,9 +20,14 @@
     background-color: #D2F1E4;
 }
 
+.projectAltContent > aside h3{
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
 .projectAltContent > aside > p{
     max-width: 95%;
-    font-size: 1.4em;
+    font-size: 1.3rem;
 }
 
 .projectAltImage{
@@ -34,7 +39,7 @@
     margin-right: 25px;
 }
 
-.projectAltImage > p{ /** Needs to be changed later from a different style sheet*/
+.projectAltImage > p{ 
     max-width: 100%;
     margin-top: 10px;
 }
