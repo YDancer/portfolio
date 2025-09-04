@@ -10,7 +10,9 @@
 .navbarLeftContainer{
     display: flex;
     align-items: center;
+    height: 75px
 }
+
 
 .leftContainerLinks > a{
     margin-left: 10%;
