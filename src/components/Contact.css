@@ -20,8 +20,17 @@
 .contactLinks{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.contactLinks > span {
+
+.linkContainer{
+    display: flex;
+    align-items: center;
     font-size: 1.4rem;
+    font-family: Piazzollo;
+}
+
+.linkContainer > span{
+    margin-right: 10px;
 }

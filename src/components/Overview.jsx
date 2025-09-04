@@ -1,5 +1,6 @@
 import sampleUser from "../assets/sampleUser.png"
 import './Overview.css'
+import linkedInIcon from "../assets/linkedIn.svg"
 
 // Overview section of the portfolio
 // Contains "About me" information
@@ -26,7 +27,9 @@ export default function Overview(){
             <div className="right">
                 <h3>Keerat Singh</h3>
                 <img src={sampleUser}></img>
-                <a href="?">LinkedIn</a>
+                <div className="linkContainer">
+                    <a href="https://www.linkedin.com/in/keerat-singh-8aa872271/" style={{display: "flex"}}><img src={linkedInIcon} style={{width: "50px", height: "35px"}}></img></a><a href="https://www.linkedin.com/in/keerat-singh-8aa872271/">LinkedIn</a>
+                </div>
             </div>
         </section>
     )

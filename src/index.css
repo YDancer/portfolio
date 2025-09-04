@@ -16,6 +16,10 @@
     /** Used for bodies of text or non headers */
 }
 
+*{
+    color: #1D0E58;
+}
+
 body{
     margin: 0;
     background-color: #F7F9F9;
@@ -48,3 +52,16 @@ footer {
     font-family: LunaSans;
     font-size: 1.2rem;
 }
+
+* a{
+    text-decoration: none;
+    color: #812B2B;
+    font-family: Piazzollo;
+
+}
+
+* a:hover{
+    text-decoration: underline;
+    text-decoration-color: #812B2B;
+}
+
