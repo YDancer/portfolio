@@ -48,7 +48,12 @@
     left: 100%;
     margin-left: -50px;
     margin-top: 0px;
+    transition: width 0.3s ease-out, height 0.3s ease-out;
+}
 
+.ImageModalHeader > img:hover{
+    width: 47.5px;
+    height: 47.5px;
 }
 
 .ImageModalFooter{

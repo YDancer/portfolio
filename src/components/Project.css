@@ -61,8 +61,17 @@
     font-family: Piazzollo;
 }
 
+.sidebarArrows:hover > img{
+    left: -10px;
+}
+
 .sidebarArrows > img{
     height: 60px;
     width: 60px;
+    position: relative;
+    left: 0;
+    transition-property: left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }
 

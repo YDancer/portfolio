@@ -13,12 +13,25 @@
     align-items: center;
 }
 
+.bottomButton:hover > img {
+    top: -10px;
+}
+
 .bottomButton > img{
     height: 60px;
     width: 60px;
+    top: 0px;
+    position: relative;
+    transition-property: top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }
 
 .bottomButton > h3{
     margin-top: 0;
     font-weight: normal;
+}
+
+.bottomButtons .invertArrow:hover > img{
+    top: 10px;
 }
