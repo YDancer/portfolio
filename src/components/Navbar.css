@@ -10,11 +10,20 @@
 .navbarLeftContainer{
     display: flex;
     align-items: center;
+    width: 65%;
+}
+
+.leftContainerLinks{
+    width: 100%;
+}
+
+.navbarRightContainer{
+    margin-right: 2.5%;
 }
 
 .navbarContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .navbarImg{
