@@ -10,12 +10,13 @@
 .navbarLeftContainer{
     display: flex;
     align-items: center;
-    height: 75px
 }
 
+.leftContainerLinks{
+    padding-left: 10%; /** Note this takes 10% of full container size
+                        So if you wanted to add the transition without it shifting the components
+                        then the new width of the anchor tag + the padding cannot exceed the div width*/
 
-.leftContainerLinks > a{
-    margin-left: 10%;
 }
 
 .navbarRightContainer{
@@ -29,7 +30,12 @@
     height: 90%;
 }
 
-.navbarContainer > a{ 
+.navbarContainer > div{
+    align-self: center;
+    width: 200px;
+}
+
+.navbarContainer > div > a{ 
     color: #D2F1E4;
     text-decoration: none;
     text-align: center;
@@ -37,7 +43,11 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    min-width: 175px;
+    width: 5px;
+    height: calc(0.9*75px);
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
 .navbarContainer a > img{
@@ -45,8 +55,9 @@
     width: 50px;
 }
 
-.navbarContainer > a:hover{
+.navbarContainer > div > a:hover{
     background-color: #C75757;
+    width: 175px;
 }
 
 .navbarImg{
