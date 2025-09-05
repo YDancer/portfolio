@@ -160,6 +160,7 @@ export default function Project(props){
             overlayHandler={overlayOff}
             recomputeImage={recomputeImage}
             imageTitles={props.imageTitles}
+            isAlt = {false}
             />}
         </section>
     )

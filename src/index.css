@@ -1,12 +1,72 @@
+@font-face {
+    font-family: Piazzollo;
+    src: url(./assets/fonts/Piazzolla-Regular.ttf);
+    /*Used for headings/titles**/
+}
+
+@font-face {
+    font-family: SquareAntiqua;
+    src: url(./assets/fonts/SquareAntiqua-Book.ttf);
+    /** Used exclusively for the navbar */
+}
+
+@font-face {
+    font-family: LunaSans;
+    src: url(./assets/fonts/LunaSans-Regular.ttf);
+    /** Used for bodies of text or non headers */
+}
+
+*{
+    color: #1D0E58;
+}
+
 body{
     margin: 0;
     background-color: #F7F9F9;
 }
 
+
 main{
     margin: 25px 50px;
+}
+
+main > hr{
+    color:#1D0E58;
 }
 
 section{
     border-radius: 10px;
 }
+
+footer {
+    font-family: Piazzollo;
+}
+
+* h2 {
+    font-family: Piazzollo;
+    font-size: 2rem;
+}
+
+* h3 {
+    font-family: Piazzollo;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+* p {
+    font-family: LunaSans;
+    font-size: 1.2rem;
+}
+
+* a{
+    text-decoration: none;
+    color: #812B2B;
+    font-family: Piazzollo;
+
+}
+
+* a:hover{
+    text-decoration: underline;
+    text-decoration-color: #812B2B;
+}
+

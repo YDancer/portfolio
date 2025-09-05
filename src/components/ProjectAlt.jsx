@@ -182,6 +182,7 @@ export default function ProjectAlt(props){
             overlayHandler={overlayOff}
             recomputeImage={recomputeImage}
             imageTitles={props.imageTitles}
+            isAlt={true}
             />}
         </section>
     )

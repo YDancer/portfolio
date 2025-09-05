@@ -2,9 +2,36 @@
     background-color: #E2EEF3;
     margin-bottom: 25px;
     color: #1D0E58;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.contactContainer > h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.contactContainer > h3{
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 1.5rem;
 }
 
 .contactLinks{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+
+.linkContainer{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: Piazzollo;
+}
+
+.linkContainer > span{
+    margin-right: 10px;
 }

@@ -1,0 +1,39 @@
+.navbarButton{
+    width: 175px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+.navbarButton:hover .buttonBackground {
+    left: 0;
+}
+
+.buttonBackground{
+    position: absolute;
+    width: 175px;
+    height: calc(0.9*75px);
+    left: -175px;
+    background-color: #C75757;
+    border-radius: 0px;
+    transition-duration: 0.5s;
+    transition-property: left;
+    transition-timing-function: ease-out;
+}
+
+.navbarButton > a{
+    color: #D2F1E4;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: calc(0.9*75px);
+    position: relative;
+}
+
+.navbarButton > a > img{
+    height: 50px;
+    width: 50px;
+}

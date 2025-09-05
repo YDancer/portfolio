@@ -27,6 +27,13 @@
 .slideshowLeftArrow{
     height: 50px;
     width: 50px;
+    position: relative;
+    left: 0px;
+    transition: left 0.3s ease-out;
+}
+
+.slideshowLeftArrow:hover{
+    left: -3.5px;
 }
 
 .slideshowLeftImage{
@@ -43,6 +50,13 @@
 .slideshowRightArrow{
     height: 50px;
     width: 50px;
+    position: relative;
+    right: 0px;
+    transition: right 0.3s ease-out;
+}
+
+.slideshowRightArrow:hover{
+    right: -3.5px;
 }
 
 .slideshowRightImage{

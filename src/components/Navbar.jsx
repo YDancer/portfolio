@@ -4,6 +4,7 @@ import homeIcon from "../assets/home.svg"
 import projectIcon from "../assets/project.svg"
 import projectIcon2 from "../assets/otherProject.svg"
 import contactIcon from "../assets/contact.svg"
+import NavbarButton from "./NavbarButton"
 
 // the navbar (used to navigate between different pages)
 // We might want to opt to have a seperate quick links from the home page too
@@ -20,14 +21,15 @@ export default function Navbar(){
             </a>
             
             <div className="navbarContainer leftContainerLinks">
-                <a href=""><img src={homeIcon}></img>Home</a>
-                <a href="Projects"><img src={projectIcon}></img>Projects</a>
-                <a href="External Media"><img src={projectIcon2}></img>External Media</a>
+                <NavbarButton buttonText="Home" jumpTo="#overview" imgSrc={homeIcon}/>
+                <NavbarButton buttonText="Projects" jumpTo="#projects" imgSrc={projectIcon}/>
+                <NavbarButton buttonText="External Media" jumpTo="#extMedia" imgSrc={projectIcon2}/>
             </div>
             </div>
             <div className="navbarRightContainer navbarContainer">
-                <a href="Contact Me"><img src={contactIcon}></img>Contact Me</a>
+                <NavbarButton buttonText="Contact" jumpTo="#contact" imgSrc={contactIcon}/>
             </div>
+            
         </nav>
     )
 }
