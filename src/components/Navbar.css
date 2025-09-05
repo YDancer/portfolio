@@ -12,52 +12,9 @@
     align-items: center;
 }
 
-.leftContainerLinks{
-    padding-left: 10%; /** Note this takes 10% of full container size
-                        So if you wanted to add the transition without it shifting the components
-                        then the new width of the anchor tag + the padding cannot exceed the div width*/
-
-}
-
-.navbarRightContainer{
-    margin-right: 10px;
-}
-
 .navbarContainer{
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    height: 90%;
-}
-
-.navbarContainer > div{
-    align-self: center;
-    width: 200px;
-}
-
-.navbarContainer > div > a{ 
-    color: #D2F1E4;
-    text-decoration: none;
-    text-align: center;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    width: 5px;
-    height: calc(0.9*75px);
-    transition-property: width;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
-
-.navbarContainer a > img{
-    height: 50px;
-    width: 50px;
-}
-
-.navbarContainer > div > a:hover{
-    background-color: #C75757;
-    width: 175px;
 }
 
 .navbarImg{
