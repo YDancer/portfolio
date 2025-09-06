@@ -111,14 +111,31 @@ export default function Project(props){
         } else if(moreRole){
             return(
                     <div className="projectRight">
-                        <Sidebar sidebarTitle="More about my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle} isAlt={false}/>
+                        <Sidebar sidebarTitle="More about my role" 
+                        sidebarContent={<p>{props.moreRole}</p>} 
+                        clickHandler={moreRoleToggle} 
+                        isAlt={false}/>
                     </div>
             )
 
         } else {
+            let x = -1;
+            const linkElements = props.linkHeader.map((header1)=>{
+                x++;
+                return(
+                    <div key={x+1} className="linkContent">
+                        <h4>{header1}:</h4>
+                        <a href={props.links[x]}>{props.links[x]}</a>
+                    </div>
+                )
+            })
             return(
                 <div className="projectRight">
-                    <Sidebar sidebarTitle="External links" sidebarContent={props.links} clickHandler={extLinkToggle} isAlt={false}/>
+                    <Sidebar 
+                    sidebarTitle="External links" 
+                    sidebarContent={linkElements} 
+                    clickHandler={extLinkToggle} 
+                    isAlt={false}/>
                 </div>
             )
         }

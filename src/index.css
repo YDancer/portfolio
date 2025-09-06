@@ -70,3 +70,23 @@ footer {
     text-decoration-color: #812B2B;
 }
 
+@keyframes targetFade {
+    from {background-color: #812B2B;}
+    to {background-color: transparent;}
+}
+
+#overview:target{
+    animation: targetFade 1s;
+}
+
+#projects:target {
+    animation: targetFade 1s;
+}
+
+#extmedia:target{
+    animation: targetFade 1s;
+}
+
+#contact:target{
+    animation: targetFade 1s;
+}

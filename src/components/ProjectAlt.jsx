@@ -129,11 +129,21 @@ export default function ProjectAlt(props){
 
     function recomputeSidebar(){
         if (objExpand){
-            return(<Sidebar sidebarTitle="Objective" sidebarContent={props.objective} clickHandler={objToggle} isAlt={true}/>)
+            return(<Sidebar sidebarTitle="Objective" sidebarContent={<p>{props.objective}</p>} clickHandler={objToggle} isAlt={true}/>)
         } else if (moreRole){
-            return(<Sidebar sidebarTitle="More on my role" sidebarContent={props.moreRole} clickHandler={moreRoleToggle} isAlt={true}/>)
+            return(<Sidebar sidebarTitle="More on my role" sidebarContent={<p>{props.moreRole}</p>} clickHandler={moreRoleToggle} isAlt={true}/>)
         } else if (extLinks){
-            return(<Sidebar sidebarTitle="External Links" sidebarContent={props.links} clickHandler={extLinkToggle} isAlt={true}/>)
+            let x = -1;
+            const linkElements = props.linkHeader.map((header1)=>{
+                x++;
+                return(
+                    <div key={x+1} className="linkContent">
+                        <h4>{header1}:</h4>
+                        <a href={props.links[x]}>{props.links[x]}</a>
+                    </div>
+                )
+            })
+            return(<Sidebar sidebarTitle="External Links" sidebarContent={linkElements} clickHandler={extLinkToggle} isAlt={true}/>)
         } else {
             return (<></>)
         }

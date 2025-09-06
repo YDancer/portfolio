@@ -9,7 +9,7 @@ export default function Sidebar(props){
                 <h3>{props.sidebarTitle}</h3>
                 {!props.isAlt && <img src={downArrow} className="arrowButton" onClick={props.clickHandler} alt="arrow button to close side bar"></img>}
             </div>
-            <p>{props.sidebarContent}</p>
+            {props.sidebarContent}
         </aside>
     )
 }

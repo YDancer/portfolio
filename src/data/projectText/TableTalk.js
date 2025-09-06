@@ -32,10 +32,11 @@ const name = "Sample Project 3";
 const imageTitles = ["Black cat", "Black cat staring", "Orange cat"];
 const imageDescs = ["A picture of a black cat with blue eyes and big ears", "A picture of a black cat with a big head staring", "A picture of a displeased orange cat"];
 const links = null;       
+const linkHeader = null;
 
 const imageArray = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]
 
-export default {projObj, moreRole, name, imageTitles, imageDescs, links, imageArray};
+export default {projObj, moreRole, name, imageTitles, imageDescs, links, linkHeader, imageArray};
 
 // Now create another js file that imports all files of this type
 // call it projImport.js or index.js or whatever, 
