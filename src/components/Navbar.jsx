@@ -23,7 +23,7 @@ export default function Navbar(){
             <div className="navbarContainer leftContainerLinks">
                 <NavbarButton buttonText="Home" jumpTo="#overview" imgSrc={homeIcon}/>
                 <NavbarButton buttonText="Projects" jumpTo="#projects" imgSrc={projectIcon}/>
-                <NavbarButton buttonText="External Media" jumpTo="#extMedia" imgSrc={projectIcon2}/>
+                <NavbarButton buttonText="External Media" jumpTo="#extmedia" imgSrc={projectIcon2}/>
             </div>
             </div>
             <div className="navbarRightContainer navbarContainer">
