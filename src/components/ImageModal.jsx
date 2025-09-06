@@ -40,7 +40,7 @@ export default function ImageModal(props){
         spliceArray();
     }
 
-     spliceArray();
+    spliceArray();
 
     return(
     <>
@@ -52,16 +52,13 @@ export default function ImageModal(props){
             {props.imageElements[currentIndex]}
             <div className="ImageModalFooter">
                 <img className="slideshowLeftArrow arrowButton" src={leftArrow} alt="Left Arrow" onClick={leftImage}></img>
-                {/**This is actually gonna be a lot more complicated
-                 * So what the ideal method is, if the number of images exceeds the container size
-                 * then the slideshow should be somehwat cyclic
-                 * otherwise it should remain fixed and just highlight the image that it is on
-                 * 
-                 * I don't believe I have learned enough to be able to do that as of right now
-                 */}
-                {leftImageElements}
-                <span className="overlaySlideshowSelected">{props.imageElements[currentIndex]}</span>
-                {rightImageElements}
+                <div className="smallLeftContainer">
+                    {leftImageElements}
+                </div>
+                <div className="overlaySlideshowSelected">{props.imageElements[currentIndex]}</div>
+                <div className="smallRightContainer">
+                    {rightImageElements}
+                </div>
                 <img className="slideshowRightArrow arrowButton" src={rightArrow} alt="Right Arrow" onClick={rightImage}></img>
                 
             </div>
