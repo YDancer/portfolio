@@ -23,6 +23,7 @@ export default function Body(){
                     objective={proj.projObj}
                     moreRole={proj.moreRole}
                     links={proj.links}
+                    linkHeader={proj.linkHeader}
                     imageArray={proj.imageArray}
                     key = {proj.name}
                     />)
@@ -35,6 +36,7 @@ export default function Body(){
                 objective={proj.projObj}
                 moreRole={proj.moreRole}
                 links={proj.links}
+                linkHeader={proj.linkHeader}
                 imageArray={proj.imageArray}
                 key = {proj.name}
                 />
@@ -54,6 +56,7 @@ export default function Body(){
                     objective={proj.projObj}
                     moreRole={proj.moreRole}
                     links={proj.links}
+                    linkHeader={proj.linkHeader}
                     imageArray={proj.imageArray}
                     key = {proj.name}
                     />)
@@ -66,6 +69,7 @@ export default function Body(){
                 objective={proj.projObj}
                 moreRole={proj.moreRole}
                 links={proj.links}
+                linkHeader={proj.linkHeader}
                 imageArray={proj.imageArray}
                 key = {proj.name}
                 />
@@ -77,12 +81,16 @@ export default function Body(){
         <main>
             <Overview/>
             <hr></hr>
-            <h2 style={{paddingLeft: "25px", backgroundColor: "#E8E5F0", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
-            id="projects">Projects</h2>
+            <div style={{backgroundColor : "#E8E5F0", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "3"}}>
+                <h2 style={{paddingLeft: "25px", backgroundColor: "transparent", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
+                id="projects">Projects</h2>
+            </div>
             {projElements}
             <hr></hr>
-            <h2 style={{paddingLeft: "25px", backgroundColor: (j % 2 == 0) ? "#D2F1E4" : "#E8E5F0", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
+            <div style={{backgroundColor: (j % 2 == 0) ? "#D2F1E4" : "#E8E5F0", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "3"}}>
+                <h2 style={{paddingLeft: "25px", backgroundColor: "transparent", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
             id="extmedia">External Media</h2>
+            </div>
             {extMedia}
             <hr></hr>
             <Contact/>

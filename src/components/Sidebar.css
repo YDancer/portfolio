@@ -29,6 +29,14 @@
     top: 5px;
 }
 
-.sidebarContainer > p{
+.sidebarContainer p{
     max-width: 100%;
+}
+
+.linkContent > h4{
+    font-size: 1.2rem;
+    font-family: Piazzollo;
+    margin-bottom: 0.66em;
+    margin-top: 1.66em;
+
 }
