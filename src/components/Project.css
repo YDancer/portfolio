@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     margin-left: 25px;
+    align-self: flex-start;
 }
 
 .projectLeft > p{ /** Needs to be changed later from a different style sheet*/
