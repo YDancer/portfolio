@@ -1,6 +1,6 @@
 import "./Contact.css"
-import linkedInIcon from "../assets/linkedIn.svg"
-import emailIcon from "../assets/email.svg"
+import linkedInIcon from "../assets/icons/linkedIn.svg"
+import emailIcon from "../assets/icons/email.svg"
 
 export default function Contact(){
     return(

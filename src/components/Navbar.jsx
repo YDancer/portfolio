@@ -1,9 +1,9 @@
 import "../components/Navbar.css"
 import logo1 from "../assets/kslogo.svg"
-import homeIcon from "../assets/home.svg"
-import projectIcon from "../assets/project.svg"
-import projectIcon2 from "../assets/otherProject.svg"
-import contactIcon from "../assets/contact.svg"
+import homeIcon from "../assets/icons/home.svg"
+import projectIcon from "../assets/icons/project.svg"
+import projectIcon2 from "../assets/icons/otherProject.svg"
+import contactIcon from "../assets/icons/contact.svg"
 import NavbarButton from "./NavbarButton"
 
 // the navbar (used to navigate between different pages)

@@ -1,6 +1,6 @@
 import sampleUser from "../assets/sampleUser.png"
 import './Overview.css'
-import linkedInIcon from "../assets/linkedIn.svg"
+import linkedInIcon from "../assets/icons/linkedIn.svg"
 
 // Overview section of the portfolio
 // Contains "About me" information

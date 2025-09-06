@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 import ImageModal from "./ImageModal";
 import React from "react"
 import "./Project.css"
-import sidebarLeftArrow from "../assets/sidebarArrowLeft.svg"
+import sidebarLeftArrow from "../assets/buttons/sidebarArrowLeft.svg"
 
 
 // Project is the conglomerate of the image slideshow

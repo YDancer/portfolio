@@ -1,5 +1,5 @@
 import "./Sidebar.css"
-import downArrow from "../assets/sidebarArrowDown.svg"
+import downArrow from "../assets/buttons/sidebarArrowDown.svg"
 
 export default function Sidebar(props){
     

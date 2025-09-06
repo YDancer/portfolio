@@ -1,6 +1,6 @@
 import "./BottomBar.css"
-import upArrow from "../assets/sidebarArrowUp.svg"
-import downArrow from "../assets/sidebarArrowDown.svg"
+import upArrow from "../assets/buttons/sidebarArrowUp.svg"
+import downArrow from "../assets/buttons/sidebarArrowDown.svg"
 
 export default function BottomBar(props){
     
