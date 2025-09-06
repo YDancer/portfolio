@@ -1,8 +1,8 @@
 import "./ImageModal.css"
 import React from "react"
-import leftArrow from "../assets/arrow1Left.svg"
-import rightArrow from "../assets/arrow1Right.svg"
-import closeButton from "../assets/closeButton.svg"
+import leftArrow from "../assets/buttons/arrow1Left.svg"
+import rightArrow from "../assets/buttons/arrow1Right.svg"
+import closeButton from "../assets/buttons/closeButton.svg"
 
 export default function ImageModal(props){
     // image display

@@ -1,6 +1,5 @@
-import sampleImage from "../assets/sampleImage.png"
-import leftArrow from "../assets/arrow1Left.svg"
-import rightArrow from "../assets/arrow1Right.svg"
+import leftArrow from "../assets/buttons/arrow1Left.svg"
+import rightArrow from "../assets/buttons/arrow1Right.svg"
 import "./Slideshow.css"
 
 

@@ -5,7 +5,7 @@ export default function NavbarButton(props){
     return(
         <div className="navbarButton">{/**will be fixed width for sliding effect */}
             <div className="buttonBackground"></div> {/** Will be positioned absolutely for the sliding effect*/ }
-            <a href={props.jumpTo}><img src={props.imgSrc}></img>{props.buttonText}</a>
+            <a href={props.jumpTo}><img src={props.imgSrc} alt={props.altText}></img>{props.buttonText}</a>
         </div>
     )
 }

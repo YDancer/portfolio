@@ -1,5 +1,5 @@
 import "./Sidebar.css"
-import downArrow from "../assets/sidebarArrowDown.svg"
+import downArrow from "../assets/buttons/sidebarArrowDown.svg"
 
 export default function Sidebar(props){
     
@@ -7,7 +7,7 @@ export default function Sidebar(props){
         <aside className="sidebarContainer">
             <div className="sidebarHeader">
                 <h3>{props.sidebarTitle}</h3>
-                {!props.isAlt && <img src={downArrow} className="arrowButton" onClick={props.clickHandler}></img>}
+                {!props.isAlt && <img src={downArrow} className="arrowButton" onClick={props.clickHandler} alt="arrow button to close side bar"></img>}
             </div>
             <p>{props.sidebarContent}</p>
         </aside>
