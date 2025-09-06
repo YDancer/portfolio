@@ -42,6 +42,7 @@ export default function Body(){
         }
     });
 
+    let j = i;
     // change the following 
     const extMedia = projectList.map((proj)=>{ 
         i++;
@@ -80,7 +81,7 @@ export default function Body(){
             id="projects">Projects</h2>
             {projElements}
             <hr></hr>
-            <h2 style={{paddingLeft: "25px", backgroundColor: (i % 2 == 0) ? "#D2F1E4" : "#E8E5F0", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
+            <h2 style={{paddingLeft: "25px", backgroundColor: (j % 2 == 0) ? "#D2F1E4" : "#E8E5F0", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
             id="extmedia">External Media</h2>
             {extMedia}
             <hr></hr>
