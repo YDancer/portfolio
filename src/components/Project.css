@@ -1,9 +1,3 @@
-@media only screen and (max-width: 600px)  {
-    .projectContainer{
-        flex-direction: column;
-    }
-}
-
 .projectContainer{
     display: flex;
     background-color: #E8E5F0;
