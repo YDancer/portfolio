@@ -4,15 +4,9 @@
     }
 }
 
-
 .slideshowContainer{
     display: flex;
     align-items: center;
-}
-
-.slideshowContainer > button{
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .slideshowImageContainer{
@@ -66,7 +60,9 @@
     right: -3.5px;
 }
 
-/** Below is the alt layout styles */
+/** Below is the alt layout styles 
+    All they define is dimension changes
+*/
 
 .imageContainerStyles {
     height: 400px;
