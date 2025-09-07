@@ -1,3 +1,10 @@
+@media only screen and (max-width: 600px)  {
+    .slideshowContainer{
+        flex-direction: column;
+    }
+}
+
+
 .slideshowContainer{
     display: flex;
     align-items: center;
@@ -59,14 +66,63 @@
     right: -3.5px;
 }
 
-.slideshowRightImage{
-    width: 100px;
-    height: 200px;
+/** Below is the alt layout styles */
+
+.imageContainerStyles {
+    height: 400px;
+    width: 400px;
     overflow: hidden;
-    
+    display: flex;
+    justify-content: center;
 }
 
-.slideshowRightImage > img{
-    height: 200px;
+.imageContainerStyles > img{
+    height: 400px;
 }
 
+.imageContainerStyles > img:hover{
+    cursor: pointer;
+}
+
+.imageStyles {
+    height: 400px;
+}
+
+.altImageContainerStyles {
+    height: 350px;
+    width: 350px;
+}
+
+.altImageContainerStyles > img{
+    height: 350px;
+}
+
+.adjacentContainerStyles{
+    height: 400px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.adjacentContainerStyles > img{
+    height: 400px;
+}
+
+.altAdjacentContainerStyles{
+    height: 350px;
+    width: 175px;
+    overflow: hidden;
+}
+
+.altAdjacentContainerStyles > img{
+    height: 350px;
+}
+
+.arrowStyles{
+    width: 100px;
+    height: 100px;
+}
+
+.altArrowStyles{
+    width: 75px;
+    height: 75px;
+}

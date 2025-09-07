@@ -27,7 +27,7 @@ export default function ProjectAlt(props){
     const [moreRole, setMoreRole] = React.useState(false); // Used for toggling one sidebar
     const [extLinks, setExtLinks] = React.useState(false); // Used for toggling links
 
-    const [scaleFactor, setScaleFactor] = React.useState(2)
+    const [scaleFactor, setScaleFactor] = React.useState(false)
 
     // NOTE:
     // consider moving these functions into seperate js files for more readability
@@ -93,9 +93,9 @@ export default function ProjectAlt(props){
     function objToggle(){
         setObjExpand((prev)=>{
             if (prev){
-                setScaleFactor(()=>2)
+                setScaleFactor(()=>false)
             } else {
-                setScaleFactor(()=>1.75)
+                setScaleFactor(()=>true)
             }
             return(!prev)})
         setMoreRole(()=>false);
@@ -106,9 +106,9 @@ export default function ProjectAlt(props){
         setObjExpand(()=>false);
         setMoreRole((prev)=>{
             if (prev){
-                setScaleFactor(()=>2)
+                setScaleFactor(()=>false)
             } else {
-                setScaleFactor(()=>1.75)
+                setScaleFactor(()=>true)
             }
             return(!prev)});
         setExtLinks(()=>false);
@@ -119,9 +119,9 @@ export default function ProjectAlt(props){
         setMoreRole(()=>false);
         setExtLinks((prev)=>{
             if (prev){
-                setScaleFactor(()=>2)
+                setScaleFactor(()=>false)
             } else {
-                setScaleFactor(()=>1.75)
+                setScaleFactor(()=>true)
             }
             return(!prev)});
     }

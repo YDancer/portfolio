@@ -13,55 +13,15 @@ export default function Slideshow(props){
     const leftImageIndex = props.leftIndex
     const rightImageIndex = props.rightIndex
     const selectedImage = props.currentIndex
-    
-    const imageHeight = props.isAlt ? 200*props.scaleFactor : 200
-    // Will be used in the following classes: Also assuming these are all px measurements
-    /**
-     * slideshowImageContainer
-     * slideshowImageContainer > img
-     * slideshowLeftImage
-     * slideshowLeftImage > img
-     * slideshowRightImage 
-     * slideshowRightImage > img
-     * 
-     * This is done in order to have a "dynamic" sizing
-     */
-    const imageWidth = props.isAlt ? 200*props.scaleFactor : 200 
-    // Used in slideshowImageContainer
-
-    const containerWidth = props.isAlt ? 100*props.scaleFactor : 100
-    // Used in leftImage and rightImage    
-
-    const arrowWidthHeight = props.isAlt ? 50*props.scaleFactor : 50
 
 
-    // Inline styles for the dimension
-    const imageContainerStyles = {
-        height: imageHeight.toString().concat("px"),
-        width: imageWidth.toString().concat("px")
-    }
-
-    const imageStyles = {
-        height: imageHeight.toString().concat("px")
-    }
-
-    const adjacentContainerStyles = {
-        height: imageHeight.toString().concat("px"),
-        width: containerWidth.toString().concat("px")
-    }
-
-    const arrowStyles = {
-        width: arrowWidthHeight.toString().concat("px"),
-        height: arrowWidthHeight.toString().concat("px")
-    }
-
-    // Have to recompute images in order to add inline styles
+    // Have to recompute images in order to add classnames
     function setupImages(){
         if (props.isAlt){
             let x = 0;
             const images = ((props.imgArray.map((i)=>{
                 x++
-                return <img src={i} style={imageStyles} key={x}></img>
+                return <img src={i} key={x}></img>
             })))
             return(images)
     } else {
@@ -72,17 +32,54 @@ export default function Slideshow(props){
 
     const images = setupImages()
 
+    function imageContainerClassname(){
+         if (props.isAlt){
+            if (props.scaleFactor){
+                return("altImageContainerStyles imageContainerStyles")
+            } else {
+                return ("imageContainerStyles")
+            }
+        } else {
+            return("slideshowImageContainer")
+        }
+    }
+
+    function adjacentContainerClassname(){
+        if (props.isAlt){
+            if (props.scaleFactor){
+                return("altAdjacentContainerStyles")
+            } else {
+                return ("adjacentContainerStyles")
+            }
+        } else {
+            return("slideshowLeftImage")
+        }
+    }
+
+    function arrowClassname(){
+        if (props.isAlt){
+            if (props.scaleFactor){
+                return("altArrowStyles arrowButton slideshowRightArrow")
+            } else {
+                return ("arrowStyles arrowButton slideshowRightArrow")
+            }
+        } else {
+            return("arrowButton slideshowRightArrow")
+        }
+    }
+    
+
     return(
         <div className="slideshowContainer" style={props.isAlt ? {minHeight:"400px"}: {minHeight: "none"}}>
-            <div className="slideshowLeftImage" style={adjacentContainerStyles}>
+            <div className={adjacentContainerClassname()}>
                 {images[leftImageIndex]}
             </div>
-            <img className="slideshowLeftArrow arrowButton" src={leftArrow} alt="Left Arrow" onClick={props.leftHandler} style={arrowStyles}></img>
-            <div className="slideshowImageContainer" onClick={props.overlayHandler} style={imageContainerStyles}>
+            <img className={arrowClassname()} src={leftArrow} alt="Left Arrow" onClick={props.leftHandler}></img>
+            <div className={imageContainerClassname()} onClick={props.overlayHandler}>
                 {images[selectedImage]}
             </div>
-            <img className="slideshowRightArrow arrowButton" src={rightArrow} alt="Right Arrow" onClick={props.rightHandler} style={arrowStyles}></img>
-            <div className="slideshowRightImage" style={adjacentContainerStyles}>
+            <img className={arrowClassname()} src={rightArrow} alt="Right Arrow" onClick={props.rightHandler}></img>
+            <div className={adjacentContainerClassname()}>
                 {images[rightImageIndex]}
             </div>
         </div>
