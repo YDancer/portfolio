@@ -76,53 +76,47 @@
     All they define is dimension changes
 */
 
-.imageContainerStyles {
+
+/** the following controls the height of all image containers of alt project layout */
+.imageSlideshowHeight{
     height: 400px;
+}
+
+.imageSlideshowHeight > img{
+    height: 400px;
+}
+
+.altImageSlideshowHeight{
+    height: 350px;
+}
+
+.altImageSlideshowHeight > img{
+    height: 350px;
+}
+
+.imageContainerStyles {
     width: 400px;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.imageContainerStyles > img{
-    height: 400px;
-}
-
 .imageContainerStyles > img:hover{
     cursor: pointer;
 }
 
-.imageStyles {
-    height: 400px;
-}
-
 .altImageContainerStyles {
-    height: 350px;
     width: 350px;
 }
 
-.altImageContainerStyles > img{
-    height: 350px;
-}
-
 .adjacentContainerStyles{
-    height: 400px;
     width: 200px;
     overflow: hidden;
 }
 
-.adjacentContainerStyles > img{
-    height: 400px;
-}
-
 .altAdjacentContainerStyles{
-    height: 350px;
     width: 175px;
     overflow: hidden;
-}
-
-.altAdjacentContainerStyles > img{
-    height: 350px;
 }
 
 .arrowStyles{

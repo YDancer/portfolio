@@ -35,9 +35,9 @@ export default function Slideshow(props){
     function imageContainerClassname(){
          if (props.isAlt){
             if (props.scaleFactor){
-                return("altImageContainerStyles imageContainerStyles")
+                return("altImageSlideshowHeight altImageContainerStyles imageContainerStyles")
             } else {
-                return ("imageContainerStyles")
+                return ("imageSlideshowHeight imageContainerStyles")
             }
         } else {
             return("slideshowImageContainer")
@@ -47,9 +47,9 @@ export default function Slideshow(props){
     function adjacentContainerClassname(){
         if (props.isAlt){
             if (props.scaleFactor){
-                return("altAdjacentContainerStyles")
+                return("altImageSlideshowHeight altAdjacentContainerStyles")
             } else {
-                return ("adjacentContainerStyles")
+                return ("imageSlideshowHeight adjacentContainerStyles")
             }
         } else {
             return("slideshowLeftImage")
