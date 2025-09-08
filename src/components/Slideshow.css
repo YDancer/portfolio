@@ -1,18 +1,6 @@
-@media only screen and (max-width: 600px)  {
-    .slideshowContainer{
-        flex-direction: column;
-    }
-}
-
-
 .slideshowContainer{
     display: flex;
     align-items: center;
-}
-
-.slideshowContainer > button{
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .slideshowImageContainer{
@@ -66,55 +54,51 @@
     right: -3.5px;
 }
 
-/** Below is the alt layout styles */
+/** Below is the alt layout styles 
+    All they define is dimension changes
+*/
+
+
+/** the following controls the height of all image containers of alt project layout */
+.imageSlideshowHeight{
+    height: 400px;
+}
+
+.imageSlideshowHeight > img{
+    height: 400px;
+}
+
+.altImageSlideshowHeight{
+    height: 350px;
+}
+
+.altImageSlideshowHeight > img{
+    height: 350px;
+}
 
 .imageContainerStyles {
-    height: 400px;
     width: 400px;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.imageContainerStyles > img{
-    height: 400px;
-}
-
 .imageContainerStyles > img:hover{
     cursor: pointer;
 }
 
-.imageStyles {
-    height: 400px;
-}
-
 .altImageContainerStyles {
-    height: 350px;
     width: 350px;
 }
 
-.altImageContainerStyles > img{
-    height: 350px;
-}
-
 .adjacentContainerStyles{
-    height: 400px;
     width: 200px;
     overflow: hidden;
 }
 
-.adjacentContainerStyles > img{
-    height: 400px;
-}
-
 .altAdjacentContainerStyles{
-    height: 350px;
     width: 175px;
     overflow: hidden;
-}
-
-.altAdjacentContainerStyles > img{
-    height: 350px;
 }
 
 .arrowStyles{
@@ -125,4 +109,86 @@
 .altArrowStyles{
     width: 75px;
     height: 75px;
+}
+
+
+
+/** media handles */
+@media only screen and (max-width: 1150px)  {
+    .imageSlideshowHeight{
+        height: 350px;
+    }
+
+    .imageSlideshowHeight > img{
+        height: 350px;
+    }
+
+    .imageContainerStyles{
+        width: 350px;
+    }
+
+    .adjacentContainerStyles{
+        width: 175px;
+    }
+
+    .arrowStyles{
+        width: 75px;
+        height: 75px;
+    }
+    
+}
+
+@media only screen and (max-width: 900px)  {
+    .adjacentContainerStyles{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .adjacentContainerStyles{
+        display: none;
+    }
+
+    .altAdjacentContainerStyles{
+        display: none;
+    }
+
+    .slideshowLeftImage{
+        display: none;
+    }
+
+    .imageSlideshowHeight{
+        height: 200px;
+    }
+
+    .imageContainerStyles{
+        width: 200px;
+    }
+
+    .imageSlideshowHeight > img{
+        height: 200px;
+    }
+
+    .altImageSlideshowHeight {
+        height: 200px;
+    }
+
+    .altImageSlideshowHeight > img{
+        height: 200px;
+    }
+
+    .slideshowContainer > p{
+        text-align: center;
+    }
+
+    .arrowStyles{
+        width: 50px;
+        height: 50px;
+    }
+
+    .altArrowStyles{
+        width: 50px;
+        height: 50px;
+    }
+    
 }

@@ -41,3 +41,26 @@
    font-family: SquareAntiqua;
    font-size: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbarLeftContainer{
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .navbarContainer{
+        flex-direction: column;
+    }
+
+    .navbarRightContainer{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 2.5%;
+    }
+}

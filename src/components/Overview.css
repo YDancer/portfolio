@@ -39,3 +39,32 @@
     font-size: 2rem;
     margin-top: 0.83em;
 }
+
+@media only screen and (max-width: 600px) {
+    .overviewContainer{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .left h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .left > p{
+        max-width: 90%;
+        font-size: 0.95rem;
+    }
+    
+    .right{
+        margin-top: 0;
+        padding: 0;
+    }
+}

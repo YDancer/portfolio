@@ -82,14 +82,12 @@ export default function Body(){
             <Overview/>
             <hr></hr>
             <div style={{backgroundColor : "#E8E5F0", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "1"}}>
-                <h2 style={{paddingLeft: "25px", backgroundColor: "transparent", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
-                id="projects">Projects</h2>
+                <h2 id="projects">Projects</h2>
             </div>
             {projElements}
             <hr></hr>
             <div style={{backgroundColor: (j % 2 == 0) ? "#D2F1E4" : "#E8E5F0", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "1"}}>
-                <h2 style={{paddingLeft: "25px", backgroundColor: "transparent", marginBottom: "-10px", marginTop: "25px", borderRadius: "10px 10px 0 0", fontSize: "3rem"}}
-            id="extmedia">External Media</h2>
+                <h2 id="extmedia">External Media</h2>
             </div>
             {extMedia}
             <hr></hr>

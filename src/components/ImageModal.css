@@ -107,3 +107,28 @@
     justify-content: flex-start;
     overflow: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+    .ImageModalOverlay > img{
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .smallLeftContainer{
+        display: none;
+    }
+
+    .smallRightContainer{
+        display: none;
+    }
+
+    .overlaySlideshowSelected{
+        display: none;
+    }
+
+    .ImageModalFooter{
+        justify-content: space-around;
+    }
+    
+
+}

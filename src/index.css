@@ -79,6 +79,15 @@ footer {
     animation: targetFade 1s;
 }
 
+#projects{
+    padding-left: 25px;
+    background-color: transparent;
+    margin-bottom: -10px;
+    margin-top: 25px;
+    border-radius: 10px 10px 0 0;
+    font-size: 3rem;
+}
+
 #projects:target {
     animation: targetFade 1s;
 }
@@ -87,6 +96,48 @@ footer {
     animation: targetFade 1s;
 }
 
+#extmedia{
+    padding-left: 25px;
+    background-color: transparent;
+    margin-bottom: -10px;
+    margin-top: 25px;
+    border-radius: 10px 10px 0 0;
+    font-size: 3rem;
+}
+
 #contact:target{
     animation: targetFade 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    * h2 {
+        font-size: 1.75rem;
+    }
+
+    * h3 {
+        font-size: 1.25rem;
+    }
+
+    * p {
+        font-size: 0.95rem;
+    }
+
+    main{
+        margin: 10px 15px;
+    }
+
+    main > h2{
+        text-align: center;
+    }
+
+    #projects{
+        padding: 0;
+        text-align: center;
+    }
+
+    #extmedia{
+        padding: 0;
+        text-align: center;
+    }
+    
 }
