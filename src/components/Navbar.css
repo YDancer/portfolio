@@ -29,6 +29,9 @@
 .navbarImg{
     display: flex;
     align-items: center;
+}
+
+.navbarImgContainer {
     margin-left: 10px;
 }
 
@@ -40,6 +43,14 @@
 .navbar a{
    font-family: SquareAntiqua;
    font-size: 1rem;
+}
+
+.hamburger{
+    display: none;
+}
+
+.navbarToggle{
+    display: flex;
 }
 
 @media only screen and (max-width: 600px) {
@@ -62,5 +73,24 @@
         margin: 0;
         width: 100%;
         margin-bottom: 2.5%;
+    }
+
+    .navbarImgContainer{
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .navbarToggle{
+        display: none;
     }
 }
