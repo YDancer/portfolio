@@ -40,3 +40,10 @@
     margin-top: 1.66em;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .sidebarContainer{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}

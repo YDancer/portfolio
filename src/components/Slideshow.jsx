@@ -56,7 +56,19 @@ export default function Slideshow(props){
         }
     }
 
-    function arrowClassname(){
+    function leftArrowClassname(){
+        if (props.isAlt){
+            if (props.scaleFactor){
+                return("altArrowStyles arrowButton slideshowLeftArrow")
+            } else {
+                return ("arrowStyles arrowButton slideshowLeftArrow")
+            }
+        } else {
+            return("arrowButton slideshowLeftArrow")
+        }
+    }
+
+    function rightArrowClassname(){
         if (props.isAlt){
             if (props.scaleFactor){
                 return("altArrowStyles arrowButton slideshowRightArrow")
@@ -68,17 +80,18 @@ export default function Slideshow(props){
         }
     }
     
+    // Bug above (left arrow and right arrow should have different)
 
     return(
-        <div className="slideshowContainer" style={props.isAlt ? {minHeight:"400px"}: {minHeight: "none"}}>
+        <div className="slideshowContainer">
             <div className={adjacentContainerClassname()}>
                 {images[leftImageIndex]}
             </div>
-            <img className={arrowClassname()} src={leftArrow} alt="Left Arrow" onClick={props.leftHandler}></img>
+            <img className={leftArrowClassname()} src={leftArrow} alt="Left Arrow" onClick={props.leftHandler}></img>
             <div className={imageContainerClassname()} onClick={props.overlayHandler}>
                 {images[selectedImage]}
             </div>
-            <img className={arrowClassname()} src={rightArrow} alt="Right Arrow" onClick={props.rightHandler}></img>
+            <img className={rightArrowClassname()} src={rightArrow} alt="Right Arrow" onClick={props.rightHandler}></img>
             <div className={adjacentContainerClassname()}>
                 {images[rightImageIndex]}
             </div>

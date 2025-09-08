@@ -37,3 +37,20 @@
     height: 50px;
     width: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .navbarButton{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        margin-top: 2.5%;
+        height: 90%;
+        background-color: #C75757;
+    }
+
+    .buttonBackground{
+        display: none;
+    }
+
+}

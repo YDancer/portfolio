@@ -1,9 +1,7 @@
 .bottomButtons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-right: 25px;
-    margin-left: 25px;
 }
 
 .bottomButton{
@@ -34,4 +32,11 @@
 
 .bottomButtons .invertArrow:hover > img{
     top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .bottomButton > h3{
+        font-size: 1.25rem;
+    }
 }
