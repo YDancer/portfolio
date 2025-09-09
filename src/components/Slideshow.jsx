@@ -1,6 +1,7 @@
 import leftArrow from "../assets/buttons/arrow1Left.svg"
 import rightArrow from "../assets/buttons/arrow1Right.svg"
 import "./Slideshow.css"
+import React from "react"
 
 
 // provide list of image elements for slideshow from upper component
@@ -79,11 +80,41 @@ export default function Slideshow(props){
             return("arrowButton slideshowRightArrow")
         }
     }
-    
-    // Bug above (left arrow and right arrow should have different)
+
+    // implement swiping on touch devices for image slideshow
+    // It is not animated
+    let initialCoord = null;
+    let swipedLeft = false;
+    let swipedRight = false;
+
+    function startSwipe(e){
+        initialCoord = e.touches[0].clientX
+    }
+
+    function startMotion(e){
+        let delta1 = initialCoord - e.touches[0].clientX;
+        if ((delta1) > 75){
+            swipedRight = true;
+        }
+
+        if (delta1 < -75){
+            swipedLeft = true;
+        }
+    }
+
+    function endMotion(){
+        if (swipedLeft){
+            swipedLeft = false;
+            (props.leftHandler())
+        } else if (swipedRight){
+            swipedRight = false;
+            (props.rightHandler())
+        } 
+        
+    }
 
     return(
-        <div className="slideshowContainer">
+        <div className="slideshowContainer" onTouchStart={startSwipe} onTouchMove={startMotion} onTouchEnd={endMotion}>
             <div className={adjacentContainerClassname()}>
                 {images[leftImageIndex]}
             </div>
