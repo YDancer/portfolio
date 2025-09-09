@@ -69,6 +69,15 @@
         max-width: 100%;
         margin: 0;
     }
+
+    .projectAltContent > aside h3{
+        text-align: center;
+        width: 100%;
+    }
+
+    .projectAltContent > aside p{
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
