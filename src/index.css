@@ -109,6 +109,12 @@ footer {
     animation: targetFade 1s;
 }
 
+@media only screen and (max-width: 1250px){
+    * p {
+        font-size: 1.05rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     * h2 {
         font-size: 1.75rem;

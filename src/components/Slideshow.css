@@ -138,8 +138,18 @@
     
 }
 
-@media only screen and (max-width: 900px)  {
+@media only screen and (max-width: 975px)  {
     .adjacentContainerStyles{
+        display: none;
+    }
+
+    .altAdjacentContainerStyles{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .slideshowLeftImage{
         display: none;
     }
 }
