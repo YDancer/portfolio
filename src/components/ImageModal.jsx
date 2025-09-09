@@ -40,6 +40,39 @@ export default function ImageModal(props){
         spliceArray();
     }
 
+
+    // swiping below (not animated) 
+    let initialCoord = null;
+    let swipedLeft = false;
+    let swipedRight = false;
+
+    function startSwipe(e){
+        initialCoord = e.touches[0].clientX
+    }
+
+    function startMotion(e){
+        let delta1 = initialCoord - e.touches[0].clientX;
+        if ((delta1) > 75){
+            swipedRight = true;
+        }
+
+        if (delta1 < -75){
+            swipedLeft = true;
+        }
+    }
+
+    function endMotion(){
+        if (swipedLeft){
+            swipedLeft = false;
+            (leftImage())
+        } else if (swipedRight){
+            swipedRight = false;
+            (rightImage())
+        } 
+        
+    }
+
+
     spliceArray();
 
     return(
@@ -49,7 +82,9 @@ export default function ImageModal(props){
                 <img src={closeButton} className="arrowButton" alt="Close button" onClick={props.overlayHandler}></img>
                 <h2>{props.imageTitles[currentIndex]}</h2>
             </div>
-            {props.imageElements[currentIndex]}
+            <div className="ImageModalImage" onTouchStart={startSwipe} onTouchMove={startMotion} onTouchEnd={endMotion}>
+                {props.imageElements[currentIndex]}
+            </div>
             <div className="ImageModalFooter">
                 <img className="slideshowLeftArrow arrowButton" src={leftArrow} alt="Left Arrow" onClick={leftImage}></img>
                 <div className="smallLeftContainer">
