@@ -30,7 +30,7 @@
 }
 
 .ImageModalImage > img{
-    height: 75%; /* Might have to change depending on image size*/
+    height: 100%; /* Might have to change depending on image size*/
 }
 
 .ImageModalOverlay > img:hover{

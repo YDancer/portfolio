@@ -78,10 +78,12 @@ export default function Project(props){
     // overlay handlers
     function overlayOn(){
         setOverlayShown(()=>true)
+        document.body.style.overflow = "hidden"
     }
 
     function overlayOff(){
         setOverlayShown(()=>false)
+        document.body.style.overflow = "unset"
     }
 
     // sidebar handlers

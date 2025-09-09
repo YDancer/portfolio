@@ -3,6 +3,7 @@ import Overview from "./components/Overview"
 //import {default as projectList} from "./data/projects.json"
 import ProjectAlt from "./components/ProjectAlt"
 import Contact from "./components/Contact";
+import React from "react";
 
 import {default as projectList} from "./data/projImport";
 
@@ -12,6 +13,8 @@ export default function Body(){
     // This includes all the various section elements
     // Such as the projects tab, personal endeavors and additional media
     // 
+
+    // below is generating the sections (projects and external media)
     let i = 1;
     const projElements = projectList.map((proj)=>{ 
         i++;
