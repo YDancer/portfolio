@@ -36,6 +36,17 @@
     margin-right: 10px;
 }
 
+@media only screen and (max-width: 810px) {
+    .contactContainer > h3{
+        white-space: normal;
+    }
+
+     .contactLinks{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media only screen and (max-width: 600px) {
 
     .contactContainer > h3{

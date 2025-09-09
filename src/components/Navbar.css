@@ -53,6 +53,12 @@
     display: flex;
 }
 
+@media only screen and (max-width: 1010px){
+    .navbar{
+        
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .navbar{
         flex-direction: column;

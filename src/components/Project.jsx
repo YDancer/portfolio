@@ -166,21 +166,23 @@ export default function Project(props){
                 <h3>{props.imageTitles[selectedImage]}</h3>
                 <p>{props.imageDesc[selectedImage]}</p>
             </div>
-            <div className="projectCenter">
-                <h2>Objective</h2>
-                <p>{props.objective}</p>
+            <div className="projectTextPortion">
+                <div className="projectCenter">
+                    <h2>Objective</h2>
+                    <p>{props.objective}</p>
+                </div>
+                {rightContainer()}
             </div>
-            {rightContainer()}
-            {overlayShown && 
-            <ImageModal imageElements={imgs} 
-            currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
-                                        //** Also add a way to distinguish which image you are on */
-            showOverlay={overlayShown}
-            overlayHandler={overlayOff}
-            recomputeImage={recomputeImage}
-            imageTitles={props.imageTitles}
-            isAlt = {false}
-            />}
+                {overlayShown && 
+                <ImageModal imageElements={imgs} 
+                currentIndex={selectedImage} //** Should only depend on it initially,  not constantly  aka if it swaps in the overlay, it shouldn't change the main*/
+                                            //** Also add a way to distinguish which image you are on */
+                showOverlay={overlayShown}
+                overlayHandler={overlayOff}
+                recomputeImage={recomputeImage}
+                imageTitles={props.imageTitles}
+                isAlt = {false}
+                />}
         </section>
     )
 }

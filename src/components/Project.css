@@ -23,10 +23,6 @@
     margin-left: 25px;
 }
 
-.projectCenter > p{
-    max-width: 90%;
-}
-
 .projectRight{
     display: flex;
     justify-content: space-around;
@@ -38,6 +34,10 @@
     background-color: #812B2B;
     color: white;
     margin: 25px 0px;
+}
+
+.projectTextPortion{
+    display: flex;
 }
 
 .arrowButton{
@@ -77,7 +77,35 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1300px){
+    .projectContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+
+    .projectCenter{
+        width: 100%;
+    }
+    
+    .projectRight{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0;
+        width: 100%;
+    }
+
+    .projectCenter > p{
+        max-width: 90%;
+        align-self: center;
+    }
+
+    .projectTextPortion{
+        justify-content: space-between;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
     .projectContainer{
         flex-wrap: wrap;
         justify-content: center;
@@ -94,6 +122,7 @@
     }
 
     .projectCenter > p{
+        max-width: 90%;
         align-self: center;
     }
 
@@ -107,5 +136,9 @@
         justify-content: space-evenly;
         width: 100%;
         margin: 0;
+    }
+
+    .projectTextPortion{
+        flex-direction: column;
     }
 }
