@@ -27,6 +27,7 @@ for further information there is a readme there
 - Animations
 - Separate Web Pages (Will be a comprehensive list of all my worked on projects) I hope to be able to get to this point
 - Click functionality on the slideshow
+- Arrow key functionality on slideshow
 - General optimizations
 - SVG Background Trimming
 
