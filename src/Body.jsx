@@ -3,10 +3,10 @@ import Overview from "./components/Overview"
 //import {default as projectList} from "./data/projects.json"
 import ProjectAlt from "./components/ProjectAlt"
 import Contact from "./components/Contact";
-import React from "react";
+
 
 import {default as projectList} from "./data/projImport";
-
+import {default as mediaList} from "./data/otherMediaImport";
 
 export default function Body(){
     // Main content
@@ -15,7 +15,7 @@ export default function Body(){
     // 
 
     // below is generating the sections (projects and external media)
-    let i = 1;
+    let i = 0;
     const projElements = projectList.map((proj)=>{ 
         i++;
         if (i % 2 == 0){
@@ -51,7 +51,7 @@ export default function Body(){
 
     let j = i;
     // change the following 
-    const extMedia = projectList.map((proj)=>{ 
+    const extMedia = mediaList.map((proj)=>{ 
         i++;
         if (i % 2 == 0){
             return(<Project 
@@ -88,7 +88,7 @@ export default function Body(){
         <main>
             <Overview/>
             <hr></hr>
-            <div style={{backgroundColor : "#E8E5F0", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "1"}}>
+            <div style={{backgroundColor : "#D2F1E4", borderRadius: "10px 10px 0 0", position: "relative", zIndex: "1"}}>
                 <h2 id="projects">Projects</h2>
             </div>
             {projElements}

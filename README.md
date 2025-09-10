@@ -1,12 +1,33 @@
-# React + Vite
+# Welcome to a website all about ME!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I made this website to learn ReactJS and attempt to build a portfolio at the same time.
+As it stands right now I am still just a beginner in the React space and have not unlocked the more powerful potential of React.
+Nevertheless, I have still created this website from scratch. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Made with React + Vite
+npm version used was 10.9.2
 
-## Expanding the ESLint configuration
+# General Program Structure
+src/components folder contains all components of the project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Project uses -> ImageModal, Slideshow and Sidebar
+ProjectAlt uses -> ImageModal, Slideshow, Sidebar, and BottomBar
+Navbar uses -> NavbarButton
+Note that: ImageModal also uses Slideshow
+Essentially the above mentioned 4 components use other components, otherwise each component is standalone.
+
+src folder contains Body, Footer, Header components, which are the main elements of the document
+
+src/data folder contains all the text and image paths of a project
+for further information there is a readme there
+
+
+# Bucket list (TO DO in the future)
+- Animations
+- Separate Web Pages (Will be a comprehensive list of all my worked on projects) I hope to be able to get to this point
+- Click functionality on the slideshow
+- General optimizations
+- SVG Background Trimming
+
+

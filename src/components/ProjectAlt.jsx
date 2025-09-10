@@ -185,6 +185,7 @@ export default function ProjectAlt(props){
                 moreRole = {moreRole}
                 extLinks = {extLinks}
                 solo = {props.solo}
+                links = {props.links}
             />
 
             {overlayShown && 
