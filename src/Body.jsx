@@ -28,6 +28,7 @@ export default function Body(){
                     links={proj.links}
                     linkHeader={proj.linkHeader}
                     imageArray={proj.imageArray}
+                    solo = {proj.solo}
                     key = {proj.name}
                     />)
         }else{
@@ -41,6 +42,7 @@ export default function Body(){
                 links={proj.links}
                 linkHeader={proj.linkHeader}
                 imageArray={proj.imageArray}
+                solo = {proj.solo}
                 key = {proj.name}
                 />
              )
@@ -62,6 +64,7 @@ export default function Body(){
                     linkHeader={proj.linkHeader}
                     imageArray={proj.imageArray}
                     key = {proj.name}
+                    solo = {proj.solo}
                     />)
         }else{
              return(
@@ -75,6 +78,7 @@ export default function Body(){
                 linkHeader={proj.linkHeader}
                 imageArray={proj.imageArray}
                 key = {proj.name}
+                solo = {proj.solo}
                 />
              )
         }

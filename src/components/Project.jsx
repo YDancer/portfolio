@@ -102,7 +102,7 @@ export default function Project(props){
                 <div className="projectRight">
                     <div className="sidebarArrows arrowButton" onClick={moreRoleToggle}>
                         <img src={sidebarLeftArrow} alt="Expand the more on my role sidebar"></img>
-                        <span>My role</span>
+                        <span>{props.solo ? "Additional Information" : "My role"}</span>
                     </div>
                     <div className="sidebarArrows arrowButton" onClick={extLinkToggle}>
                         <img src={sidebarLeftArrow} alt="Expand the external links sidebar"></img>
@@ -113,7 +113,7 @@ export default function Project(props){
         } else if(moreRole){
             return(
                     <div className="projectRight">
-                        <Sidebar sidebarTitle="More about my role" 
+                        <Sidebar sidebarTitle={props.solo ? "Additional Information" : "More about my role"} 
                         sidebarContent={<p>{props.moreRole}</p>} 
                         clickHandler={moreRoleToggle} 
                         isAlt={false}/>

@@ -23,10 +23,11 @@ const imageTitles = ["Black cat alt", "Black cat staring alt", "Orange cat alt"]
 const imageDescs = ["A picture of a black cat with blue eyes and big ears", "A picture of a black cat with a big head staring", "A picture of a displeased orange cat"];
 const links = ["https://www.youtube.com/watch?v=Nf4AKMhw2MU", "https://github.com/YDancer/portfolio"]
 const linkHeader = ["Youtube Video", "Github link"]       
+const solo = true;
 
 const imageArray = [img1, img2, img3]
 
-export default {projObj, moreRole, name, imageTitles, imageDescs, links, linkHeader, imageArray};
+export default {projObj, moreRole, name, imageTitles, imageDescs, links, linkHeader, imageArray, solo};
 
 // Now create another js file that imports all files of this type
 // call it projImport.js or index.js or whatever, 
