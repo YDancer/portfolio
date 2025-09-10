@@ -118,6 +118,7 @@ footer {
 @media only screen and (max-width: 600px) {
     * h2 {
         font-size: 1.75rem;
+        text-align: center;
     }
 
     * h3 {

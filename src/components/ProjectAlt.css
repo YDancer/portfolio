@@ -81,6 +81,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    .projectAltImage > p{
+        white-space: normal;
+        text-align: center;
+    }
+
     .projectAltContent{
         flex-wrap: wrap-reverse;
     }    

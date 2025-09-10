@@ -38,5 +38,12 @@
 
     .bottomButton > h3{
         font-size: 1.25rem;
+        white-space: normal;
+        text-align: center;
     }
+
+    .bottomButtons{
+        align-items: flex-start;
+    }
+
 }
