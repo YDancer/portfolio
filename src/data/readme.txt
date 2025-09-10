@@ -8,3 +8,5 @@ projImport.js
     Next make sure the images are imported
 
     Now go to the projImport.js file, and add in the new file into the export array (assuming you import it too)
+
+    For otherMediaImport.js  it is the exact same thing but placed in a different section in the document

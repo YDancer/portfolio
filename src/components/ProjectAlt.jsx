@@ -133,7 +133,7 @@ export default function ProjectAlt(props){
         if (objExpand){
             return(<Sidebar sidebarTitle="Objective" sidebarContent={<p>{props.objective}</p>} clickHandler={objToggle} isAlt={true}/>)
         } else if (moreRole){
-            return(<Sidebar sidebarTitle="More on my role" sidebarContent={<p>{props.moreRole}</p>} clickHandler={moreRoleToggle} isAlt={true}/>)
+            return(<Sidebar sidebarTitle={props.solo ? "Additional Information" : "More about my role"} sidebarContent={<p>{props.moreRole}</p>} clickHandler={moreRoleToggle} isAlt={true}/>)
         } else if (extLinks){
             let x = -1;
             const linkElements = props.linkHeader.map((header1)=>{
@@ -184,6 +184,8 @@ export default function ProjectAlt(props){
                 objExpand = {objExpand}
                 moreRole = {moreRole}
                 extLinks = {extLinks}
+                solo = {props.solo}
+                links = {props.links}
             />
 
             {overlayShown && 

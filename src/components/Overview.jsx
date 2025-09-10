@@ -1,4 +1,4 @@
-import sampleUser from "../assets/sampleUser.png"
+import sampleUser from "../assets/overviewImg.jpg"
 import './Overview.css'
 import linkedInIcon from "../assets/icons/linkedIn.svg"
 
@@ -12,15 +12,11 @@ export default function Overview(){
             <div className="left">
                 <h2 style={{fontSize: "3rem", marginBottom: "0"}} id="overview">Overview</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur 
-                    adipiscing elit quisque faucibus ex sapien 
-                    vitae pellentesque sem placerat in id cursus 
-                    mi pretium tellus duis convallis tempus leo eu 
-                    aenean sed diam urna tempor pulvinar vivamus 
-                    fringilla lacus nec metus bibendum egestas iaculis 
-                    massa nisl malesuada lacinia integer nunc posuere ut 
-                    hendrerit semper vel class aptent taciti sociosqu ad 
-                    litora torquent per conubia nostra inceptos 
+                    I am an aspiring developer currently studying Computer Science and Mathematics at the University of Calgary. 
+                    This website is a showcase of my various and ongoing achievements in the development space. 
+                    Encompassing both team efforts and individual efforts, this showcase includes projects I've worked on academically,
+                    professionally, as well as personally. For more information on my skills and experience, refer to my LinkedIn.
+                    For other inquiries, feel free to contact me via email, or send me a message on LinkedIn. 
                 </p>
                 
             </div>
